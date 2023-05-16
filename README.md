@@ -1,2 +1,2 @@
-# Portfolio-MSU-Software
-My portfolio, MSU Software - work in progress 
+# Portfolio-MSU-Digital
+My portfolio, MSU Digital - work in progress 

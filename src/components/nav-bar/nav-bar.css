@@ -1,0 +1,12 @@
+#nav-bar {
+    display: flex;
+    padding: 7px 10px;
+    background-color: black;
+}
+
+    #logo {
+        height: 60px;
+        margin-right: 10px;
+        border-radius: 50%;
+        outline: 2px solid lime;
+    }

@@ -1,0 +1,11 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(1, 1, 86);
+    color: lime;
+    margin: 0;
+}
+
+#main-content {
+    padding: 5px 20px;
+}
+
