@@ -1,12 +1,50 @@
 #nav-bar {
+    position: sticky;
     display: flex;
-    padding: 7px 10px;
+
+    height: 70px;
+    width: 100%;
+    padding: 7px 20px 7px 14px;
+    top: -1px;
+    z-index: 500;
+    
     background-color: black;
+    border: 1px solid lime;
+    border-left: 0;
+    border-right: 0;
+    box-sizing: border-box;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
 }
 
     #logo {
-        height: 60px;
-        margin-right: 10px;
+        height: 45px;
+        margin: auto 0;
+        margin-right: 11px;
         border-radius: 50%;
         outline: 2px solid lime;
     }
+
+    #nav-heading {
+        margin: auto 0;
+        font-size: 25px;
+    }
+
+    #nav-item-list {
+        display: flex;
+        align-self: center;
+        height: fit-content;
+        width: fit-content;
+        margin: 0;
+        margin-left: auto;
+        list-style-type: none;
+    }
+
+        .nav-item {
+            font-size: 24px;
+            margin-right: 27px;
+        }
+
+        .nav-item:last-child { 
+            margin-right: 0;
+        }
+
