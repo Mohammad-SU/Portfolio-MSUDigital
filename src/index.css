@@ -1,6 +1,6 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(1, 1, 86);
+    font-family: monospace, 'roboto', sans-serif;
+    background-color: black;
     color: lime;
     margin: 0;
 }
@@ -8,4 +8,11 @@ body {
 #main-content {
     padding: 5px 20px;
 }
+    .content-heading {
+        height: fit-content;
+        width: fit-content;
+        font-size: 55px;
+        margin: 63px auto;
+    }
 
+/* Make font size responsive after finsihing website */

@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-    <title>MSU Digital</title>
-
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6e7a1d9e2e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./index.css">
@@ -16,17 +14,21 @@
     <link rel="stylesheet" href="./components/projects/projects.css">
     <link rel="stylesheet" href="./components/contact/contact.css">
     <link rel="stylesheet" href="./components/footer/footer.css">
+    <title>MSU Digital</title>
 </head>
 <body>
     <section id="home-cont">
-        <h1>Hi! I'm Mohammad S.U.</h1>
+        <div id="home-content">
+            <h1 id="home-heading__line-1" class="home-heading">Welcome! I'm Mohammad S.U.</h1>
+            <h1 id="home-heading__line-2" class="home-heading">An aspiring software developer.</h1>
+        </div>
     </section>
 
     <nav id="nav-bar">
-        <img src="./assets/MSU-software-icon.png" alt="MSU Digital Logo" id="logo">
-        <h2>MSU Digital</h2>
+        <img src="./assets/msu-software-icon.png" alt="MSU Digital Logo" id="logo">
+        <h2 id="nav-heading">MSU Digital</h2>
 
-        <ul id="nav-links">
+        <ul id="nav-item-list">
             <li class="nav-item">Home</li>
             <li class="nav-item">About</li>
             <li class="nav-item">Projects</li>
@@ -34,13 +36,63 @@
         </ul>
     </nav>
 
-    <div id="main-content">
+    <main id="main-content">
         <section id="about-cont">
-            <h1>About</h1>
+            <h1 class="content-heading" id="about-heading">About</h1>
+
+            <div id="about-content">
+                <div class="skill-cont" id="skill-cont-1">
+                    <div class="skill-item col-1" id="javascript-skill">
+                        <img src="assets/skill-icons/javascript-img.png" alt="JavaScript image">
+                        <p>JavaScript</p>
+                        <img src="assets/skill-icons/javascript-img.png" alt="JavaScript image">
+                    </div>
+                    <div class="skill-item col-1" id="html-skill">
+                        <img src="assets/skill-icons/html5-img.png" alt="HTML5 image"><!-- Edited image (cropped text) from W3C, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=12736763 -->
+                        <p>HTML</p> 
+                    </div>
+                    <div class="skill-item col-1" id="css-skill">
+                        <img src="assets/skill-icons/css3-img.png" alt="CSS3 image"><!-- Edited image (cropped text) from Rudloff - File:CSS3 and HTML5 logos and wordmarks.svg, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=49121103 -->
+                        <p>CSS</p> 
+                    </div>
+                    <div class="skill-item col-1" id="react-skill">
+                        <img src="assets/skill-icons/react-img.png" alt="React image">
+                        <p>React.js</p>
+                        <img src="assets/skill-icons/react-img.png" alt="React image">
+                    </div> 
+                </div>
+
+                <div id="profile-cont">
+                    <svg id="profile-icon-wrapper" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <title>Profile icon</title>
+                        <path id="profile-icon" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                    </svg>
+                    <p id="profile-text">An aspiring software developer looking to pursue an apprenticeship that will allow me to further my progress in the industry. This field has been a great interest of mine for a while now, motivating me to research different programming languages and create projects - which you can find below. I believe that an apprenticeship may be the best route for me to gain practical experience, work alongside other developers, and become a productive member of a team.</p>
+                </div>
+
+                <div class="skill-cont" id="skill-cont-2">
+                    <div class="skill-item col-2" id="c#-skill">         
+                        <p>C#</p>
+                        <img src="assets/skill-icons/csharp-img.png" alt="C-Sharp image"><!-- By Andres15alvarez - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=66311807 -->
+                    </div>
+                    <div class="skill-item col-2" id="python-skill">
+                        <p>Python</p>
+                        <img src="assets/skill-icons/python-img.png" alt="Python image"><!-- By www.python.org - www.python.org, GPL, https://commons.wikimedia.org/w/index.php?curid=34991651 -->
+                    </div>
+                    <div class="skill-item col-2" id="git-skill">             
+                        <p>Git</p>
+                        <img src="assets/skill-icons/git-img.png" alt="Git image"><!-- By Jason Long - http://git-scm.com/downloads/logos, CC BY 3.0 -->
+                    </div>
+                    <div class="skill-item col-2" id="nodejs-skill">
+                        <p>Node.js</p>
+                        <img src="assets/skill-icons/nodejs-img.png" alt="Girl in a jacket">
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="projects-cont">
-            <h1>Projects</h1>
+            <h1 class="content-heading">Projects</h1>
             <img src="./assets/project-thumbnails/notes-screenshots/Rich-React-Notes-screenshot-2.png" alt="Rich React Notes" class="project-thumbnail">
             <img src="./assets/project-thumbnails/Connect4-screenshot.png" alt="Configurable Connect 4 Game" class="project-thumbnail">
             <img src="./assets/project-thumbnails/Calculator-screenshot.png" alt="Calculator" class="project-thumbnail">
@@ -48,9 +100,9 @@
         </section>
 
         <section id="contact-cont">
-            <h1>Contact</h1>
+            <h1 class="content-heading">Contact</h1>
         </section>
-    </div>
+    </main>
 
     <footer id="footer">
         <h3>Copyright © 2023 MSU Digital</h3>
