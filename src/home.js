@@ -1,5 +1,7 @@
 /* TO-DO
-- Add question mark with profile image
+- Make project images clickable
+- Orange grid or cross-hatch for project image background?
+- Make project buttons dashed border?
 - Finish projects section
 - Finish contact section
 - Finish footer

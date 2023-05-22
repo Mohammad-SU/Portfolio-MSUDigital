@@ -1,7 +1,3 @@
-#about-heading {
-    margin-top: 72px;
-}
-
 #about-content {
     display: flex;
     flex-direction: row;
@@ -30,6 +26,10 @@
             margin-top: 0px;
         }
 
+        .skill-item:last-child {
+            margin-bottom: 0px;
+        }
+
         .skill-item img {
             height: 70%;
         }
@@ -43,11 +43,11 @@
             }
 
             #html-skill img:first-child, #css-skill img:first-child {
-                margin-top: 5px;
+                margin-top: 3px;
                 margin-left: 20px;
             }    
             #html-skill img:last-child, #css-skill img:last-child {
-                margin-top: 5px;
+                margin-top: 3px;
                 margin-right: 20px;
             }
 
@@ -102,11 +102,11 @@
         width: fit-content;
     }
 
-    #profile-icon-cont {
+    #profile-icons-cont {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 40px;
+        margin-top: 50px;
     }
         
         #profile-grid {
@@ -136,9 +136,9 @@
                 stroke-dasharray: 40, 11;
             }
 
-
-
     #profile-text {
+        margin-top: 63px;
+        margin-bottom: 22px;
         width: 600px;
         font-size: 19px;
         line-height: 29px;
