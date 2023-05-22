@@ -1,3 +1,43 @@
-.project-thumbnail {
-    height: 300px;
+.project {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 100px 0;
 }
+
+    .project:first-child {
+        margin-top: 0;
+    }
+
+    .project:last-child {
+        margin-bottom: 0;
+    }
+
+    .project-image {
+        height: 420px;
+    }
+
+    .project-info {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+        .project-info .project-heading {
+            margin: 0;
+            font-size: 43px;
+        }
+
+        .project-info .project-stack {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-size: 21px;
+        }
+
+        .project-info .project-description {
+            margin-top: 0;
+            font-size: 20px;
+            text-align: center;
+        }
