@@ -7,7 +7,7 @@
 - Add green hue and blur filter to navbar?
 - Add patterns on sides of section headings
 - Add animations (Scrolling skills, moving dash for profile, typing/slide in animations for home sections/other text?)
-- Add interactive background (triangular moving waves top and bottom, faint binary background with interactivity) for home sections
+- Add interactive background (triangular moving waves top and bottom connected with binary digits, faint binary background with interactivity or binary digits that float and bounce as particles and connect with lines with the cursor) for home section
 - Add non-interactive background for other sections (floating and moving binary)
 - Make scroll lock to section/change scroll speed
 - Make responsive and suitable for mobile
