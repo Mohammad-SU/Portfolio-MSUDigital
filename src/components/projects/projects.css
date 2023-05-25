@@ -13,11 +13,11 @@
         margin-bottom: 0;
     }
 
-    .project-image {
+    .project__image {
         height: 420px;
     }
 
-    .project-info {
+    .project__info {
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -25,18 +25,18 @@
         text-align: center;
     }
 
-        .project-info .project-heading {
+        .project__info .project__heading {
             margin: 0;
             font-size: 43px;
         }
 
-        .project-info .project-stack {
+        .project__info .project__stack {
             margin-top: 5px;
             margin-bottom: 15px;
             font-size: 21px;
         }
 
-        .project-info .project-description {
+        .project__info .project__description {
             margin-top: 0;
             font-size: 20px;
             text-align: center;
