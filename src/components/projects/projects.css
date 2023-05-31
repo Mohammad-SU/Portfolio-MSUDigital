@@ -2,9 +2,10 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin: 100px 0;
+    outline: 2px dashed lime;
+    margin: 102px 0;
+    padding: 30px 27px;
 }
-
     .project:first-child {
         margin-top: 0;
     }
@@ -13,31 +14,81 @@
         margin-bottom: 0;
     }
 
+    .project__image-cont {
+        height: fit-content;
+    }
+
     .project__image {
-        height: 420px;
+        height: 380px;
+        border: 8px solid black;
+        outline: 2px dashed lime;
     }
 
     .project__info {
-        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 20px;
+        padding-bottom: 43px;
+        background: black;
+        outline: 2px dashed lime;
     }
-
-        .project__info .project__heading {
+        .project__heading {
             margin: 0;
             font-size: 43px;
         }
 
-        .project__info .project__stack {
+        .project__stack {
             margin-top: 5px;
             margin-bottom: 15px;
             font-size: 21px;
         }
 
-        .project__info .project__description {
+        .project__description {
             margin-top: 0;
             font-size: 20px;
             text-align: center;
         }
+
+        .project__lives-cont {
+            margin-top: 30px;
+            font-size: 28px;
+        }
+            .project__live {
+                padding: 10px;
+                color: lime;
+                outline: 3px dashed lime;
+            }
+
+            #project__live-1 {
+                margin-right: 30px;
+            }
+
+.project-left {
+    background: repeating-linear-gradient(
+        45deg,
+        lime,
+        lime 2px,
+        black 4px,
+        black 15px
+    );
+}
+    .project-left .project__info {
+        margin-right: 0;
+        margin-left: 27px;
+    }
+
+.project-right {
+    background: repeating-linear-gradient(
+        135deg,
+        lime,
+        lime 2px,
+        black 4px,
+        black 15px
+    );
+}
+    .project-right .project__info {
+        margin-right: 27px;
+        margin-left: 0;
+    }
