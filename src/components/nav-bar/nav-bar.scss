@@ -42,9 +42,11 @@
         .nav-item {
             font-size: 24px;
             margin-right: 27px;
+
+            &:last-child { 
+                margin-right: 0;
+            }
         }
 
-        .nav-item:last-child { 
-            margin-right: 0;
-        }
+
 

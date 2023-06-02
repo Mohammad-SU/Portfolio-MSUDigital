@@ -1,0 +1,84 @@
+.project {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  outline: 2px dashed lime;
+  margin: 102px 0;
+  padding: 30px 27px;
+}
+.project:first-child {
+  margin-top: 0;
+}
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.project__image-cont {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.project__image {
+  height: 380px;
+  border: 8px solid black;
+  outline: 2px dashed lime;
+}
+
+.project__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 43px;
+  background: black;
+  outline: 2px dashed lime;
+}
+
+.project__heading {
+  margin: 0;
+  font-size: 43px;
+}
+
+.project__stack {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+
+.project__description {
+  margin-top: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.project__lives-cont {
+  margin-top: 30px;
+  font-size: 28px;
+}
+
+.project__live {
+  padding: 10px;
+  color: lime;
+  outline: 3px dashed lime;
+}
+
+#project__live-1 {
+  margin-right: 30px;
+}
+
+.project-left {
+  background: repeating-linear-gradient(45deg, lime, lime 2px, black 4px, black 15px);
+}
+.project-left .project__info {
+  margin-right: 0;
+  margin-left: 27px;
+}
+
+.project-right {
+  background: repeating-linear-gradient(135deg, lime, lime 2px, black 4px, black 15px);
+}
+.project-right .project__info {
+  margin-right: 27px;
+  margin-left: 0;
+}/*# sourceMappingURL=projects.css.map */

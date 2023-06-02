@@ -1,0 +1,179 @@
+#about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+    .skill-cont {
+        height: 100%;
+        width: fit-content;
+    }
+        .skill-item {
+            display: flex;
+            align-items: center;
+            height: 70px;
+            width: 365px;
+            margin: 70px 0;
+            overflow: visible;
+            background-color: #000000;
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='35' ry='35' stroke='lime' stroke-width='4' stroke-dasharray='20%2c 11' stroke-dashoffset='29' stroke-linecap='square'/%3e%3c/svg%3e");
+            border-radius: 9999px;
+            box-sizing: border-box;
+
+            img {
+                height: 70%;
+            }
+
+            p {
+                margin: 0 auto;
+                font-size: 25px;
+            }
+
+            &:first-child {
+                margin-top: 0px;
+                
+                    p {
+                        font-size: 22px;
+                    }
+            }
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+
+        }
+
+            #javascript-skill img {
+                &:first-child {
+                    margin-left: 22px;
+                    border-radius: 6px;
+                }
+                &:last-child {
+                    margin-right: 22px;
+                    border-radius: 6px;
+                }
+            }
+
+            #html-skill img {
+                &:first-child {
+                    margin-top: 3px;
+                    margin-left: 20px;
+                }
+                &:last-child {
+                    margin-top: 3px;
+                    margin-right: 20px;
+                }
+            }
+
+            #css-skill {
+                img {
+                    &:first-child {
+                        margin-top: 3px;
+                        margin-left: 20px;
+                    }
+                    &:last-child {
+                        margin-right: 9px;
+                    }
+                }
+
+                p {
+                    margin-right: 15px;
+                }
+
+            }
+
+            #react-skill img {
+                &:first-child {
+                    margin-left: 10px;
+                }
+                &:last-child {
+                    margin-right: 10px;
+                }
+            }
+
+            #csharp-skill img {
+                &:first-child {
+                    margin-left: 11px;
+                }
+                &:last-child {
+                    margin-right: 11px;
+                }
+            }
+
+            #python-skill img {
+                &:first-child {
+                    margin-left: 8.5px;
+                }
+                &:last-child {
+                    margin-right: 8.5px;
+                }
+            }
+            
+            #git-skill img {
+                &:first-child {
+                    margin-left: 7px;
+                }
+                &:last-child {
+                    margin-right: 7px;
+                }
+            }
+
+            #nodejs-skill img {
+                &:first-child {
+                    margin-left: 10.5px;
+                }
+                &:last-child {
+                    margin-right: 10.5px;
+                }
+            }
+
+    #profile-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    }
+
+    #profile-icons-cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+        
+        #profile-grid {
+            position: absolute;
+            height: 290px;
+            width: 290px;
+            z-index: -1;
+            background-size: 23px 23px;
+            background-position: center;
+            background-image:
+                linear-gradient(to right, lime 1px, transparent 1px),
+                linear-gradient(to bottom, lime 1px, transparent 1px);
+            border-radius: 50%;
+        }
+    
+        #profile-user-icon-wrapper {
+            height: 180px;
+            width: 180px;
+            padding-bottom: 27px;
+            overflow: visible
+        }
+            #profile-user-icon {
+                fill: black;
+                stroke: lime;
+                stroke-width: 5px;
+                stroke-dasharray: 40, 11;
+            }
+
+    #profile-text {
+        margin-top: 63px;
+        margin-bottom: 22px;
+        width: 600px;
+        font-size: 19px;
+        line-height: 29px;
+        text-align: center;
+    }
+

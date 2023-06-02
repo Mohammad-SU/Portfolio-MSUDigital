@@ -5,14 +5,15 @@
     outline: 2px dashed lime;
     margin: 102px 0;
     padding: 30px 27px;
-}
-    .project:first-child {
+
+    &:first-child {
         margin-top: 0;
     }
 
-    .project:last-child {
+    &:last-child {
         margin-bottom: 0;
     }
+}
 
     .project__image-cont {
         height: fit-content;
@@ -73,11 +74,12 @@
         black 4px,
         black 15px
     );
-}
-    .project-left .project__info {
+
+    .project__info {
         margin-right: 0;
         margin-left: 27px;
     }
+}
 
 .project-right {
     background: repeating-linear-gradient(
@@ -87,8 +89,9 @@
         black 4px,
         black 15px
     );
-}
-    .project-right .project__info {
+
+    .project__info {
         margin-right: 27px;
         margin-left: 0;
     }
+}
