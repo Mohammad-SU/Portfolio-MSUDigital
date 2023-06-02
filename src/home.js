@@ -12,7 +12,7 @@
 - Make scroll lock to section/change scroll speed
 - Make responsive and suitable for mobile
 - Check if website looks good on other browsers (firefox, bing, opera, IE, etc.)
-- Make page colour changeable? (CSS hue filter, ignore project images, add this feature on the top of page at home section which appears slowly with animation, when user scrolls, it will look like it connects with the navbar)
+- Make page colour changeable? (Sass variable - change lime to $primary-color, manually add colour filters for images, add this feature on the top of page at home section which appears slowly with animation, when user scrolls, it will look like it connects with the navbar)
 - Change dash styles to be longer?
-- Change demo links to google drive/dropbox
+- Change demo links to google drive/dropbox, embed videos?
 */

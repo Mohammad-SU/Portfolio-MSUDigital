@@ -6,13 +6,6 @@
     width: 100%;
     z-index: 999;
 }
-    #home-content {
-        display: flex;
-        width: fit-content;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .home-heading {
         font-size: 3.6rem;
         margin: 0;
@@ -25,3 +18,11 @@
         #home-heading__line-2 {
             margin-left: 15.625rem;
         }
+
+    #home-content {
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+        align-items: center;
+    }
+
