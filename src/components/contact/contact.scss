@@ -1,0 +1,58 @@
+#contact-cont h1 {
+    margin-bottom: 53px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    width: 800px;
+    margin: 0 auto;
+
+    input, textarea {
+        padding: 0.5em;
+        font-family: inherit;
+        font-size: 20px;
+        color: lime;
+        background-color: black;
+        border: 1px solid lime;
+        
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: lime;
+                opacity: 0.8; /* Firefox */
+            }
+    }
+}
+
+    #contact-form__message {
+        resize: none;
+        height: 180px;
+
+        &::-webkit-scrollbar-track {
+            background: black;
+            outline: none;
+            border-left: 2px dashed lime;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: black;
+            outline: none;
+            border: 2px solid lime;
+            border-right: 1px solid lime;;
+
+            &:hover {
+                background-color: rgba(0, 255, 0, 0.332);
+            }
+        }
+    }
+
+#contact-text {
+    font-size: 22px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: fit-content;
+}
