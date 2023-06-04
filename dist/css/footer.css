@@ -1,3 +1,19 @@
 #footer {
-  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid lime;
+}
+
+#footer-text {
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 18px;
+}
+
+#github-icon {
+  position: absolute;
+  height: 35px;
+  right: 14px;
 }/*# sourceMappingURL=footer.css.map */
