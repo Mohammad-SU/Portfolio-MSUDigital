@@ -158,18 +158,25 @@
 
         <section id="contact-cont">
             <h1 class="section-heading">Contact</h1>
-            <p id="contact-text">Do you have a question or want to work with me? Send me a message: </p>
-            <form id="contact-form" method="POST" netlify>
-                <input id="contact-form__name" placeholder="Name" maxlength="100"></input>
-                <input id="contact-form__email" placeholder="Email" maxlength="100"></input>
+            <p id="contact-text">Have a question or want to work with me? Send a message! </p>
+            <form id="contact-form" method="POST" netlify data-netlify-recaptcha="true">
+                <div id="contact-form__personal-cont">
+                    <input id="contact-form__name" placeholder="Name" maxlength="100" autocomplete="given-name"></input>
+                    <input id="contact-form__email" placeholder="Email" maxlength="100"></input>
+                </div>
                 <input id="contact-form__subject" placeholder="Subject" maxlength="200"></input>
                 <textarea id="contact-form__message" placeholder="Message" maxlength="10000"></textarea>
+                <div id="contact-form__submit-cont">
+                    <div data-netlify-recaptcha="true"></div>
+                    <button id="contact-form__submit"type="submit">Submit</button>
+                </div>
             </form>
         </section>
     </main>
 
     <footer id="footer">
-        <h3>MSU Digital ©2023</h3>
+        <h3 id="footer-text">MSU Digital ©2023</h3>
+        <img src="./assets/github-mark-white.png" id="github-icon">
     </footer>
 
     <script src="home.js"></script>

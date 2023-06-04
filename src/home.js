@@ -1,12 +1,14 @@
 /* TO-DO
 - Make project images clickable
-- Change colour of navbar links depedning on the section the user is viewing (with fade animation)
-- Finish contact section
+- Change colour of navbar links depedning on the section the user is viewing (with fade animation), add anchor/click function
+- Finish submit button and error
+- Netlify custom success page
 - Finish footer
 - Add favicon
 - Add "view my work" or "scroll down", etc. on home section
 - Add green hue and blur filter to navbar?
 - Add patterns on sides of section headings (Scale >> Text << Animation with letters of heading slowly changing to a special character/number e.g "A" changing to 4, "o" changing to "0", etc. )
+- Add hover animations on buttons/anchors
 - Add animations (Scrolling skills, moving dash for profile, typing/slide in animations for home sections/other text?)
 - Add interactive background (triangular moving waves top and bottom connected with binary digits, faint binary background with interactivity or binary digits that float and bounce as particles and connect with lines with the cursor) for home section
 - Add non-interactive background for other sections (floating and moving binary)
