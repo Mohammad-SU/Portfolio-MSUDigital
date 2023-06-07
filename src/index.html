@@ -19,6 +19,7 @@
 </head>
 <body>
     <!-- Cursor icons - added green strokes - Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+    <div id="home" class="home-overlay"></div>
     <section id="home-cont">
         <div id="home-content">
             <h1 id="home-heading__line-1" class="home-heading">Welcome! I'm Mohammad S.U.</h1>
@@ -31,22 +32,30 @@
         <h2 id="nav-heading">MSU Digital</h2>
 
         <ul id="nav-item-list">
-            <li class="nav-item">Home</li>
-            <li class="nav-item">About</li>
-            <li class="nav-item">Projects</li>
-            <li class="nav-item">Contact</li>
+            <li id="nav-item__home" class="nav-item">
+                <a href="#home" target="_self">Home</a>
+            </li>
+            <li id="nav-item__about" class="nav-item">
+                <a href="#about" target="_self">About</a>
+            </li>
+            <li id="nav-item__projects" class="nav-item">
+                <a href="#projects" target="_self">Projects</a>
+            </li>
+            <li id="nav-item__contact" class="nav-item">
+                <a href="#contact" target="_self">Contact</a>
+            </li>
         </ul>
     </nav>
 
     <main id="main-content">
-        <section id="about-cont">
+        <section id="about">
             <h1 class="section-heading" id="about-heading">About</h1>
 
             <div id="about-content">
                 <div class="skill-cont" id="skill-cont-1">
                     <div class="skill-item col-1" id="javascript-skill">
                         <img src="assets/skill-icons/javascript-img.png" alt="JavaScript image">
-                        <p> >> JAVASCRIPT << </p>
+                        <p> >> JS/JQUERY << </p>
                         <img src="assets/skill-icons/javascript-img.png">
                     </div>
                     <div class="skill-item col-1" id="html-skill">
@@ -101,16 +110,16 @@
             </div>
         </section>
 
-        <section id="projects-cont">
+        <section id="projects">
             <h1 class="section-heading">Projects</h1>
 
             <div id="project-content">
                 <div class="project project-left" id="project-1">
-                    <img src="./assets/project-images/notes-screenshots/Rich-React-Notes-screenshot-2.png" alt="Rich React Notes" class="project-image">
+                    <img class="project-image" src="./assets/project-images/notes-screenshots/Rich-React-Notes-screenshot-2.png" alt="Rich React Notes">
                     <div class="project-info">
                         <h2 class="project-heading">Rich React Notes</h2>
                         <h3 class="project-stack"> >> React.js • HTML • CSS << </h2>
-                        <p class="project-description">Save and edit notes with this web app. Enhance them with rich-text, image uploads, and media embeds. Filter notes through a search, and enjoy the animations and responsive CSS.</p>
+                        <p class="project-description">Save and edit notes with this web app. Enhance them with rich text, image uploads, and media embeds. Filter notes through a search, and enjoy the animations and responsive CSS.</p>
                         <div class="project-lives__cont">
                             <a class="project-live" id="project-live-1" href="https://rich-react-notes.netlify.app/">LIVE APP</a>
                             <a class="project-live" id="project-live-2" href="https://github.com/Mohammad-SU/Rich-React-Notes">LEARN MORE</a>      
@@ -121,16 +130,16 @@
                     <div class="project-info">
                         <h2 class="project-heading">Configurable Connect 4</h2>
                         <h3 class="project-stack"> >> JavaScript/jQuery • HTML • CSS << </h2>
-                        <p class="project-description">A Connect 4 game that includes multiple game modes, colour settings, and animations.</p>
+                        <p class="project-description">Connect pieces in a game that includes multiple game modes, colour settings, and animations.</p>
                         <div class="project-lives__cont">
                             <a class="project-live" id="project-live-1" href="https://configurable-connect4-game.netlify.app/">LIVE APP</a>
                             <a class="project-live" id="project-live-2" href="https://github.com/Mohammad-SU/Configurable-Connect4-Game">LEARN MORE</a>      
                         </div>
                     </div>
-                    <img src="./assets/project-images/Connect4-screenshot.png" alt="Configurable Connect 4 Game" class="project-image">
+                    <img class="project-image" src="./assets/project-images/Connect4-screenshot.png" alt="Configurable Connect 4 Game">
                 </div>
                 <div class="project project-left" id="project-3">
-                    <img src="./assets/project-images/Calculator-screenshot.png" alt="Calculator" class="project-image">
+                    <img class="project-image" src="./assets/project-images/Calculator-screenshot.png" alt="Calculator">
                     <div class="project-info">
                         <h2 class="project-heading">Calculator</h2>
                         <h3 class="project-stack"> >> C# << </h2>
@@ -151,12 +160,12 @@
                             <a class="project-live" id="project-live-2" href="https://github.com/Mohammad-SU/Random-Card-Game">LEARN MORE</a>      
                         </div>
                     </div>
-                    <img src="./assets/project-images/Random-Card-Game-screenshot.png" alt="Random Card Game" class="project-image">
+                    <img class="project-image" src="./assets/project-images/Random-Card-Game-screenshot.png" alt="Random Card Game">
                 </div>
             </div>
         </section>
 
-        <section id="contact-cont">
+        <section id="contact">
             <h1 class="section-heading">Contact</h1>
             <p id="contact-text">Have a question or want to work with me? Send a message! </p>
             <form id="contact-form" method="POST" netlify data-netlify-recaptcha="true">
@@ -175,10 +184,16 @@
     </main>
 
     <footer id="footer">
+        <a href="#home" target="_self" id="back-to-top">
+            <div> >> </div>
+        </a>
         <h3 id="footer-text">MSU Digital ©2023</h3>
-        <img src="./assets/github-mark-white.png" id="github-icon">
+        <a id="github-anchor" href="https://github.com/Mohammad-SU">
+            <img id="github-icon" src="./assets/github-mark-white.png" >
+        </a>
     </footer>
 
-    <script src="home.js"></script>
+    <script src="components/home/home.js"></script>
+    <script src="components/nav-bar/nav-bar.js"></script>
 </body>
 </html>

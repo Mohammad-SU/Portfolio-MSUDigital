@@ -1,4 +1,6 @@
-#contact-cont h1 {
+#contact h1 {
+  padding: 0;
+  margin: 105px auto;
   margin-bottom: 45px;
 }
 
@@ -16,7 +18,7 @@
   gap: 13px;
   width: 600px;
   margin: 0 auto;
-  margin-bottom: 97px;
+  margin-bottom: 90px;
 }
 #contact-form input, #contact-form textarea {
   padding: 0.5em;

@@ -33,9 +33,6 @@
 .skill-item:first-child {
   margin-top: 0px;
 }
-.skill-item:first-child p {
-  font-size: 22px;
-}
 .skill-item:last-child {
   margin-bottom: 0px;
 }
@@ -118,6 +115,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  z-index: 1;
 }
 
 #profile-grid {

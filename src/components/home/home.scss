@@ -1,28 +1,36 @@
+.home-overlay {
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0)
+}
+
 #home-cont {
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
-    z-index: 999;
+    top: 0;
+    z-index: -1;
 }
-    .home-heading {
-        font-size: 3.6rem;
-        margin: 0;
-    }
-        #home-heading__line-1 { /* Slide in/typing animation? */
-            margin-right: 15.625rem;
-            margin-bottom: 6px;
-        }
-
-        #home-heading__line-2 {
-            margin-left: 15.625rem;
-        }
-
     #home-content {
         display: flex;
         width: fit-content;
         flex-direction: column;
         align-items: center;
     }
+        .home-heading {
+            font-size: 3.6rem;
+            margin: 0;
+        }
+            #home-heading__line-1 { /* Slide in/typing animation? */
+                margin-right: 15.625rem;
+                margin-bottom: 6px;
+            }
+
+            #home-heading__line-2 {
+                margin-left: 15.625rem;
+            }
 
