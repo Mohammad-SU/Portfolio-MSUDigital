@@ -1,10 +1,27 @@
+.home-overlay {
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0);
+}
+
 #home-cont {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
-  z-index: 999;
+  top: 0;
+  z-index: -1;
+}
+
+#home-content {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-direction: column;
+  align-items: center;
 }
 
 .home-heading {
@@ -19,12 +36,4 @@
 
 #home-heading__line-2 {
   margin-left: 15.625rem;
-}
-
-#home-content {
-  display: flex;
-  width: -moz-fit-content;
-  width: fit-content;
-  flex-direction: column;
-  align-items: center;
 }/*# sourceMappingURL=home.css.map */

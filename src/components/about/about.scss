@@ -31,10 +31,6 @@
 
             &:first-child {
                 margin-top: 0px;
-                
-                    p {
-                        font-size: 22px;
-                    }
             }
 
             &:last-child {
@@ -43,12 +39,12 @@
 
         }
 
-            #javascript-skill img {
-                &:first-child {
+            #javascript-skill {
+                img:first-child {
                     margin-left: 18px;
                     border-radius: 6px;
                 }
-                &:last-child {
+                img:last-child {
                     margin-right: 18px;
                     border-radius: 6px;
                 }
@@ -140,6 +136,7 @@
         justify-content: center;
         align-items: center;
         margin-top: 50px;
+        z-index: 1;
     }
         
         #profile-grid {
