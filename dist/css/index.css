@@ -49,6 +49,17 @@ a {
   background: black;
 }
 
+section {
+  background: black;
+}
+section:last-child .section-heading {
+  padding-bottom: 40px;
+  padding-top: 90px;
+}
+section:last-child .section-content {
+  margin-bottom: 90px;
+}
+
 .section-heading {
   width: -moz-fit-content;
   width: fit-content;

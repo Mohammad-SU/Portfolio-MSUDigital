@@ -47,10 +47,23 @@ body {
     #main-content {
         background: black;
     }
+        section {
+            background: black;
 
-    .section-heading {
-        width: fit-content;
-        font-size: 55px;
-        padding: 105px 0;
-        margin: 0 auto;
-    }
+            &:last-child { // #contact
+                .section-heading {
+                    padding-bottom: 40px;
+                    padding-top: 90px;
+                }
+
+                .section-content {
+                    margin-bottom: 90px;
+                }
+            }
+        }
+            .section-heading {
+                width: fit-content;
+                font-size: 55px;
+                padding: 105px 0;
+                margin: 0 auto;
+            }
