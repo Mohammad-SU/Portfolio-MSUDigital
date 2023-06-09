@@ -51,7 +51,7 @@
         <section id="about">
             <h1 class="section-heading" id="about-heading">About</h1>
 
-            <div id="about-content">
+            <div class="section-content" id="about-content">
                 <div class="skill-cont" id="skill-cont-1">
                     <div class="skill-item col-1" id="javascript-skill">
                         <img src="assets/skill-icons/javascript-img.png" alt="JavaScript image">
@@ -111,9 +111,9 @@
         </section>
 
         <section id="projects">
-            <h1 class="section-heading">Projects</h1>
+            <h1 class="section-heading" id="projects-heading">Projects</h1>
 
-            <div id="project-content">
+            <div class="section-content" id="projects-content">
                 <div class="project project-left" id="project-1">
                     <img class="project-image" src="./assets/project-images/notes-screenshots/Rich-React-Notes-screenshot-2.png" alt="Rich React Notes">
                     <div class="project-info">
@@ -167,19 +167,22 @@
 
         <section id="contact">
             <h1 class="section-heading">Contact</h1>
-            <p id="contact-text">Have a question or want to work with me? Send a message! </p>
-            <form id="contact-form" method="POST" netlify data-netlify-recaptcha="true">
-                <div id="contact-form__personal-cont">
-                    <input id="contact-form__name" placeholder="Name" maxlength="100" autocomplete="given-name"></input>
-                    <input id="contact-form__email" placeholder="Email" maxlength="100"></input>
-                </div>
-                <input id="contact-form__subject" placeholder="Subject" maxlength="200"></input>
-                <textarea id="contact-form__message" placeholder="Message" maxlength="10000"></textarea>
-                <div id="contact-form__submit-cont">
-                    <div data-netlify-recaptcha="true"></div>
-                    <button id="contact-form__submit"type="submit">Submit</button>
-                </div>
-            </form>
+
+            <div class="section-content">
+                <p id="contact-text">Have a question or want to work with me? Send a message! </p>
+                <form id="contact-form" method="POST" netlify data-netlify-recaptcha="true">
+                    <div id="contact-form__personal-cont">
+                        <input id="contact-form__name" placeholder="Name" maxlength="100" autocomplete="given-name"></input>
+                        <input id="contact-form__email" placeholder="Email" maxlength="100"></input>
+                    </div>
+                    <input id="contact-form__subject" placeholder="Subject" maxlength="200"></input>
+                    <textarea id="contact-form__message" placeholder="Message" maxlength="10000"></textarea>
+                    <div id="contact-form__submit-cont">
+                        <div data-netlify-recaptcha="true"></div>
+                        <button id="contact-form__submit"type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 

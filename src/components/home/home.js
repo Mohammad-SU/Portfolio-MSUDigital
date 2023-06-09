@@ -1,4 +1,5 @@
 /* TO-DO
+- Add jQuery img
 - Make project images clickable
 - Make GitHub logo clickable and add back to top button
 - Change colour of navbar links depedning on the section the user is viewing (with fade animation), add anchor/click function
