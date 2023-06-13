@@ -46,18 +46,24 @@ a {
 }
 
 #main-content {
+  position: relative;
   background: black;
+  z-index: 2;
 }
 
-section {
-  background: black;
+#particles-main-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
+
 section:last-child .section-heading {
   padding-bottom: 40px;
   padding-top: 90px;
 }
 section:last-child .section-content {
-  margin-bottom: 85px;
+  padding-bottom: 85px;
 }
 
 .section-heading {
@@ -80,4 +86,4 @@ section:last-child .section-content {
   font-size: 50px;
   margin-left: 1rem;
   letter-spacing: -7px;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=global.css.map */

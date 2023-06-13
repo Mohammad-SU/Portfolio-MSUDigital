@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6e7a1d9e2e.js" crossorigin="anonymous"></script>
     <base target="_blank">
-    <link rel="stylesheet" href="../dist/css/index.css">
+    <link rel="stylesheet" href="../dist/css/global.css">
     <link rel="stylesheet" href="../dist/css/home.css">
     <link rel="stylesheet" href="../dist/css/nav-bar.css">
     <link rel="stylesheet" href="../dist/css/about.css">
@@ -19,8 +19,10 @@
 </head>
 <body>
     <!-- Cursor icons - added green strokes - Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-    <div id="home" class="home-overlay"></div>
+    <div id="home" class="home-area"></div>
     <section id="home-cont">
+        <div id="particles-home"></div>
+        <script src="components/home/particles.js"></script>
         <div id="home-content">
             <h1 id="home-heading__line-1" class="home-heading">Welcome! I'm Mohammad S.U.</h1>
             <h1 id="home-heading__line-2" class="home-heading">An aspiring software developer.</h1>
@@ -55,7 +57,7 @@
                 <div class="skill-cont" id="skill-cont-1">
                     <div class="skill-item col-1" id="javascript-skill">
                         <img src="assets/skill-icons/javascript-img.png" alt="JavaScript image">
-                        <p> >> JS/JQUERY << </p>
+                        <p> >> JAVASCRIPT << </p>
                         <img src="assets/skill-icons/javascript-img.png">
                     </div>
                     <div class="skill-item col-1" id="html-skill">
@@ -115,14 +117,16 @@
 
             <div class="section-content" id="projects-content">
                 <div class="project project-left" id="project-1">
-                    <img class="project-image" src="./assets/project-images/notes-screenshots/Rich-React-Notes-screenshot-2.png" alt="Rich React Notes">
+                    <a href="https://rich-react-notes.netlify.app/">
+                        <img class="project-image" src="./assets/project-images/notes-screenshots/Rich-React-Notes-screenshot-2.png" alt="Rich React Notes">
+                    </a>  
                     <div class="project-info">
                         <h2 class="project-heading">Rich React Notes</h2>
                         <h3 class="project-stack"> >> React.js • HTML • CSS << </h2>
                         <p class="project-description">Save and edit notes with this web app. Enhance them with rich text, image uploads, and media embeds. Filter notes through a search, and enjoy the animations and responsive CSS.</p>
                         <div class="project-lives__cont">
                             <a class="project-live" id="project-live-1" href="https://rich-react-notes.netlify.app/">LIVE APP</a>
-                            <a class="project-live" id="project-live-2" href="https://github.com/Mohammad-SU/Rich-React-Notes">LEARN MORE</a>      
+                            <a class="project-live" id="project-live-2" href="https://github.com/Mohammad-SU/Rich-React-Notes">LEARN MORE</a>    
                         </div>
                     </div>
                 </div>
@@ -132,14 +136,18 @@
                         <h3 class="project-stack"> >> JavaScript/jQuery • HTML • CSS << </h2>
                         <p class="project-description">Connect pieces in a game that includes multiple game modes, colour settings, and animations.</p>
                         <div class="project-lives__cont">
-                            <a class="project-live" id="project-live-1" href="https://configurable-connect4-game.netlify.app/">LIVE APP</a>
+                            <a class="project-live" id="project-live-1" href="https://configurable-connect4-game.netlify.app/">LIVE GAME</a>
                             <a class="project-live" id="project-live-2" href="https://github.com/Mohammad-SU/Configurable-Connect4-Game">LEARN MORE</a>      
                         </div>
                     </div>
-                    <img class="project-image" src="./assets/project-images/Connect4-screenshot.png" alt="Configurable Connect 4 Game">
+                    <a href="https://configurable-connect4-game.netlify.app/">
+                        <img class="project-image" src="./assets/project-images/Connect4-screenshot.png" alt="Configurable Connect 4 Game">
+                    </a>
                 </div>
                 <div class="project project-left" id="project-3">
-                    <img class="project-image" src="./assets/project-images/Calculator-screenshot.png" alt="Calculator">
+                    <a href="https://www.youtube.com/watch?v=odKDBLcFtEo&feature=youtu.be">
+                        <img class="project-image" src="./assets/project-images/Calculator-screenshot.png" alt="Calculator">
+                    </a>
                     <div class="project-info">
                         <h2 class="project-heading">Calculator</h2>
                         <h3 class="project-stack"> >> C# << </h2>
@@ -160,7 +168,9 @@
                             <a class="project-live" id="project-live-2" href="https://github.com/Mohammad-SU/Random-Card-Game">LEARN MORE</a>      
                         </div>
                     </div>
-                    <img class="project-image" src="./assets/project-images/Random-Card-Game-screenshot.png" alt="Random Card Game">
+                    <a href="https://www.youtube.com/watch?v=UU31cP--v1Y&feature=youtu.be">
+                        <img class="project-image" src="./assets/project-images/Random-Card-Game-screenshot.png" alt="Random Card Game">
+                    </a>
                 </div>
             </div>
         </section>
@@ -196,6 +206,7 @@
         </a>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.10.1/tsparticles.confetti.bundle.min.js"></script>
     <script src="components/home/home.js"></script>
     <script src="components/nav-bar/nav-bar.js"></script>
 </body>

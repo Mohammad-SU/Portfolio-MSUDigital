@@ -1,8 +1,10 @@
 #footer {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 30px 0;
     border-top: 1px solid lime;
+    z-index: 2;
 }
 
     #back-to-top {
@@ -21,7 +23,6 @@
         right: 0;
 
         background: black;
-        outline: 2px dashed lime;
         border-radius: 50%;
 
         div {
@@ -31,6 +32,35 @@
             text-align: center;
             width: 100%;
             height: 100%;
+        }
+
+        &:hover {
+            animation: glow 0.7s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime, 0 0 25px lime, 0 0 30px lime, 0 0 35px lime;
+            }
+            to {
+                text-shadow: 0 0 7px lime, 0 0 14px lime, 0 0 21px lime, 0 0 28px lime, 0 0 35px lime, 0 0 42px lime, 0 0 49px lime;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 100%; 
+            width: 100%; 
+            outline: 2px dashed lime;
+            border-radius: inherit;
+        }
+        &:hover::before {
+            animation: spin 6s linear infinite;
+        }
+        @keyframes spin { 
+            100% { 
+                transform: rotateZ(360deg); 
+            }
         }
     }
 
