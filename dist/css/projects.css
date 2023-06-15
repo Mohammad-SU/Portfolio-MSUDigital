@@ -122,7 +122,7 @@
 }
 
 .project-left {
-  background: repeating-linear-gradient(45deg, lime, lime 2px, black 3px, black 80px);
+  background: repeating-linear-gradient(45deg, lime, lime 2px, transparent 3px, transparent 80px);
 }
 .project-left .project-info {
   margin-right: 0;
@@ -130,7 +130,7 @@
 }
 
 .project-right {
-  background: repeating-linear-gradient(135deg, lime, lime 2px, black 3px, black 80px);
+  background: repeating-linear-gradient(135deg, lime, lime 2px, transparent 3px, transparent 80px);
 }
 .project-right .project-info {
   margin-right: 27px;

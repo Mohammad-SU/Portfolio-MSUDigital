@@ -4,7 +4,7 @@ function navActive(entries, observer) { // Change highlighted nav-item depending
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             $(navItems).removeClass('nav-item--active')
-            document.querySelector(`#nav-item__${entry.target.id}`).classList.add('nav-item--active')
+            $(`#nav-item__${entry.target.id}`).addClass('nav-item--active')
         }
     })
 }
