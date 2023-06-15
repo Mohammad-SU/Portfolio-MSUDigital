@@ -4,7 +4,8 @@
   align-items: center;
   padding: 30px 0;
   border-top: 1px solid lime;
-  z-index: 2;
+  background: black;
+  z-index: 999;
 }
 
 #back-to-top {
@@ -20,6 +21,7 @@
   transform: rotate(-90deg);
   left: 0;
   right: 0;
+  z-index: 999;
   background: black;
   border-radius: 50%;
 }
