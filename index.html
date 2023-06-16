@@ -179,7 +179,7 @@
 
             <div class="section-content">
                 <p id="contact-text">Have a question or want to work with me? Send a message! </p>
-                <form id="contact-form" method="POST" netlify data-netlify-recaptcha="true">
+                <form id="contact-form" name="contact-form" method="POST" netlify data-netlify-recaptcha="true">
                     <div id="contact-form__personal-cont">
                         <input id="contact-form__name" placeholder="Name" maxlength="100" autocomplete="given-name"></input>
                         <input id="contact-form__email" placeholder="Email" maxlength="100"></input>
@@ -188,7 +188,7 @@
                     <textarea id="contact-form__message" placeholder="Message" maxlength="10000"></textarea>
                     <div id="contact-form__submit-cont">
                         <div data-netlify-recaptcha="true"></div>
-                        <button id="contact-form__submit"type="submit">Submit</button>
+                        <button id="contact-form__submit" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
