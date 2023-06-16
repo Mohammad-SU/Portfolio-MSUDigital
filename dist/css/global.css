@@ -48,7 +48,7 @@ a {
 #main-content {
   position: relative;
   background: transparent;
-  z-index: 10;
+  z-index: 999;
 }
 
 #particles-main-content {
@@ -57,12 +57,12 @@ a {
   height: 100dvh;
   width: 100%;
   background: black;
-  z-index: -2;
+  z-index: -1;
   pointer-events: none;
 }
 #particles-main-content canvas {
   position: relative;
-  z-index: -2;
+  z-index: -1;
 }
 
 section:last-child .section-heading {
