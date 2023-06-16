@@ -5,7 +5,7 @@
   width: 100%;
   padding: 7px 20px 7px 14px;
   top: -1px;
-  z-index: 999;
+  z-index: 99999;
   background-color: black;
   border: 1px solid lime;
   border-left: 0;
