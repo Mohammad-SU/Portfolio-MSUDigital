@@ -41,7 +41,7 @@ tsParticles.load("particles-main-content", {
 const particles_main_content = tsParticles.domItem(1)
 
 $(window).scroll(function() {
-    if ($(window).scrollTop() < $('#nav-bar').height()) {
+    if ($(window).scrollTop() <= $('#nav-bar').height()) {
         particles_main_content.pause()
     }
     else {
