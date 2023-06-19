@@ -1,5 +1,4 @@
 /* TO-DO
-- Finish contact error and captcha css
 - Netlify custom success page
 - Add favicon
 - Add "view my work" or "scroll down", etc. on home section

@@ -19,20 +19,20 @@ window.captchaExpired = captchaExpired;
 window.captchaError = captchaError;
 
 submitButton.on("pointerenter", function() {
+    const re = /^\S+@\S+\.\S+$/
     console.log("formState = " + formState)
     console.log("captchaState = " + captchaState)
+    console.log($("#contact-form__name").val())
+    console.log(re.test($("#contact-form__email").val()))
 
-    const re = /^\S+@\S+\.\S+$/
-
-    switch (true) {
-        case $("contact-form__name").val() == undefined || $("contact-form__email").val() == undefined || $("contact-form__subject").val() == undefined || $("contact-form__message").val() == undefined:
-            formState = "unfinished"
-            break;
-        case re.test($("contact-form__email").val()) == false && $("contact-form__name").val() != undefined && $("contact-form__email").val() != undefined && $("contact-form__subject").val() != undefined && $("contact-form__message").val() != undefined:
-            formState = "invalid email"
-            break;
-        default:
-            formState = ""
+    if ($("#contact-form__name").val() == undefined || $("#contact-form__email").val() == undefined || $("#contact-form__subject").val() == undefined || $("#contact-form__message").val() == undefined) {
+        formState = "unfinished"
+    }
+    else if (re.test($("#contact-form__email").val()) == false && $("#contact-form__name").val() != "" && $("#contact-form__email").val() != "" && $("#contact-form__subject").val() != "" && $("#contact-form__message").val() != "") {
+        formState = "invalid email"
+    }
+    else {
+        formState = ""
     }
 
     switch (true) {
