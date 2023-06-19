@@ -19,6 +19,9 @@ window.captchaExpired = captchaExpired;
 window.captchaError = captchaError;
 
 submitButton.on("pointerenter", function() {
+    console.log("formState = " + formState)
+    console.log("captchaState = " + captchaState)
+
     const re = /^\S+@\S+\.\S+$/
 
     switch (true) {

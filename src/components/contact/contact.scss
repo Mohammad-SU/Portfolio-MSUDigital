@@ -193,11 +193,11 @@
     }
 
     #contact-form__captcha {
-        width: 160px;
-        margin-top: -13px;
-        height: 50px;
+        overflow: hidden;
+        width: 297px;
+        height: 71px;
         transform: scale(0.8);
-        transform-origin: 0 0;
+        transform-origin: 0 0;    
     }
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { 
