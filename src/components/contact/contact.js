@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const recaptcha = document.querySelector('.g-recaptcha');
-    recaptcha.setAttribute("data-theme", "dark");
-});
+function captchaCallback() {
+    const submitButton = document.getElementById("contact-form__submit");
+    submitButton.removeAttribute("disabled");
+}
+
+window.captchaCallback = captchaCallback; // Define recaptchaCallback in the global scope.
