@@ -68,15 +68,67 @@
     }
 
     #contact-form__submit {
+        display: inline-block;
+        position: relative;
         width: 115px;
         font-size: 22px;
         padding: 10px;
 
         background: black;
-        border: none;
         color: lime;
         border: 3px dashed lime;
         font-family: inherit;
+
+        #error-tooltip {
+            position: absolute;
+
+            font-size: 14px;
+            width: 170px;
+            height: fit-content;
+            padding: 7px 17px;
+            top: -20px;
+            left: 50%;
+            z-index: 9999;
+
+            transform: translate(-50%, -100%);
+            color: #00FF00;
+            background-color: #000000;
+            border-radius: 8px;
+            box-sizing: border-box;
+            border: 1px solid #00FF00; 
+            box-shadow: 0 1px 8px rgba(0,0,0,0.5);
+
+            visibility: hidden; 
+            opacity: 0; 
+            transition: opacity 0.8s;
+        }
+        
+            #error-arrow {
+                position: absolute;
+                width: 24px;
+                height: 12px;
+                top: 100%;
+                left: 50%;
+                margin-left: -12px;
+                overflow: hidden;
+            }
+            
+            #error-arrow::after {
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 50%;
+                transform: translate(-50%,-50%) rotate(45deg);
+                background-color: #000000;
+                border: 1px solid #00FF00; 
+                box-shadow: 0 1px 8px rgba(0,0,0,0.5);
+            }
+
+            &:disabled:hover #error-tooltip {
+                visibility: visible;
+                opacity: 1;
+            }
 
         &::before {
             content: '>>';
@@ -142,9 +194,11 @@
 
     #contact-form__captcha {
         width: 160px;
+        margin-top: -13px;
         height: 50px;
+        transform: scale(0.8);
+        transform-origin: 0 0;
     }
-
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { 
     transition-delay: 3600s; // Prevent autofill from changing background and text color
