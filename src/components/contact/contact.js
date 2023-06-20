@@ -14,17 +14,9 @@ function captchaError() {
     captchaState = "error"
 }
 
-window.captchaCompleted = captchaCompleted; // Define recaptchaCallbacks in the global scope.
-window.captchaExpired = captchaExpired;
-window.captchaError = captchaError;
-
 submitButton.on("pointerenter", function() {
     const re = /^\S+@\S+\.\S+$/
-    console.log("formState = " + formState)
-    console.log("captchaState = " + captchaState)
-    console.log($("#contact-form__name").val())
-    console.log(re.test($("#contact-form__email").val()))
-
+    
     switch (true) {
         case $("#contact-form__name").val() == "" || $("#contact-form__email").val() == "" || $("#contact-form__subject").val() == "" || $("#contact-form__message").val() == "":
             formState = "unfinished"
