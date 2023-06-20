@@ -1,12 +1,12 @@
 /* TO-DO
-- Netlify custom success page
 - Add favicon
 - Add "view my work" or "scroll down", etc. on home section
 - Add animations (Scrolling skills, typing/slide in animations for home sections/other text?)
-- Make scroll lock to section/change scroll speed?
 - Make responsive and suitable for mobile
 - Check if website looks good on other browsers (firefox, bing, opera, IE, etc.)
 - Change demo links to google drive/dropbox, embed videos?
+- Make scroll lock to section/change scroll speed?
+- Netlify custom success page?
 */
 
 tsParticles.load("particles-home", {
