@@ -16,7 +16,7 @@ function captchaError() {
 
 submitButton.on("pointerenter", function() {
     const re = /^\S+@\S+\.\S+$/
-    
+
     switch (true) {
         case $("#contact-form__name").val() == "" || $("#contact-form__email").val() == "" || $("#contact-form__subject").val() == "" || $("#contact-form__message").val() == "":
             formState = "unfinished"
@@ -31,7 +31,7 @@ submitButton.on("pointerenter", function() {
     switch (true) {
         case captchaState == "error":
             submitButton.prop('disabled', true);
-            errorText.text("Captcha error. Please check your connection and refresh the page.")
+            errorText.text("Captcha error. Please check your connection and/or refresh the page.")
             break;
         case formState == "unfinished":
             submitButton.prop('disabled', true);
