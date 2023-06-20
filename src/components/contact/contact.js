@@ -26,7 +26,7 @@ submitButton.on("pointerenter", function() {
     console.log(re.test($("#contact-form__email").val()))
 
     switch (true) {
-        case $("#contact-form__name").val() == undefined || $("#contact-form__email").val() == undefined || $("#contact-form__subject").val() == undefined || $("#contact-form__message").val() == undefined:
+        case $("#contact-form__name").val() == "" || $("#contact-form__email").val() == "" || $("#contact-form__subject").val() == "" || $("#contact-form__message").val() == "":
             formState = "unfinished"
             break;
         case re.test($("#contact-form__email").val()) == false && $("#contact-form__name").val() != "" && $("#contact-form__email").val() != "" && $("#contact-form__subject").val() != "" && $("#contact-form__message").val() != "":
