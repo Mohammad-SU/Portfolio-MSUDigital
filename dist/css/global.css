@@ -92,7 +92,7 @@ section:last-child .section-content {
   content: "<<";
   position: absolute;
   font-size: 50px;
-  margin-left: 1rem;
+  margin-left: 0.7rem;
   letter-spacing: -7px;
 }
 

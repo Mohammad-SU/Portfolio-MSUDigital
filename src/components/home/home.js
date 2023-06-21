@@ -1,6 +1,5 @@
-/* TO-DO
+/*
 - Add favicon
-- Add "view my work" or "scroll down", etc. on home section
 - Add animations (Scrolling skills, typing/slide in animations for home sections/other text?)
 - Make responsive and suitable for mobile
 - Check if website looks good on other browsers (firefox, bing, opera, IE, etc.)
