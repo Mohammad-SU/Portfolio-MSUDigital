@@ -10,31 +10,49 @@
 
 #back-to-top {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 43px;
+  height: 43px;
   margin: 0 auto;
   margin-bottom: 80px;
-  line-height: 38.5px;
+  line-height: 42px;
   transform: rotate(-90deg);
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 1000;
+  transition: scale 330ms, box-shadow 330ms;
   background: black;
   border-radius: 50%;
+  box-sizing: border-box;
 }
 #back-to-top div {
-  margin-right: 4px;
+  margin-left: -2.5px;
   letter-spacing: -5px;
   font-size: 26px;
   text-align: center;
   width: 100%;
   height: 100%;
 }
+#back-to-top::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 2px dashed lime;
+  border-radius: inherit;
+  box-sizing: border-box;
+}
 #back-to-top:hover {
-  animation: glow 0.7s ease-in-out infinite alternate;
+  scale: 1.1;
+  box-shadow: 0 0 20px 5px lime;
+  animation: glow 0.7s ease-in-out infinite alternate, glow-back-to-top 0.7s ease-in-out 330ms infinite alternate;
+}
+#back-to-top:hover::before {
+  animation: spin 6s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 @keyframes glow {
   from {
@@ -44,20 +62,12 @@
     text-shadow: 0 0 7px lime, 0 0 14px lime, 0 0 21px lime, 0 0 28px lime, 0 0 35px lime, 0 0 42px lime, 0 0 49px lime;
   }
 }
-#back-to-top::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  outline: 2px dashed lime;
-  border-radius: inherit;
-}
-#back-to-top:hover::before {
-  animation: spin 6s linear infinite;
-}
-@keyframes spin {
-  100% {
-    transform: rotateZ(360deg);
+@keyframes glow-back-to-top {
+  from {
+    box-shadow: 0 0 20px 5px lime;
+  }
+  to {
+    box-shadow: 0 0 20px 9px lime;
   }
 }
 

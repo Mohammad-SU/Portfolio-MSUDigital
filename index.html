@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="src/assets/favicon/site.webmanifest">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <base target="_blank">
     <link rel="stylesheet" href="dist/css/global.css">
     <link rel="stylesheet" href="dist/css/home.css">
     <link rel="stylesheet" href="dist/css/nav-bar.css">
@@ -14,6 +16,7 @@
     <link rel="stylesheet" href="dist/css/projects.css">
     <link rel="stylesheet" href="dist/css/contact.css">
     <link rel="stylesheet" href="dist/css/footer.css">
+    <base target="_blank">
     <title>MSU Digital</title>
 </head>
 <body>
@@ -121,10 +124,26 @@
 
             <div class="section-content" id="projects-content">
                 <div class="project project-left" id="project-1">
-                    <a href="https://rich-react-notes.netlify.app/">
-                        <img class="project-image" src="src/assets/project-images/notes-screenshots/Rich-React-Notes-screenshot-2.png" alt="Rich React Notes">
-                    </a>  
-                    <div class="project-info">
+                    <div class="slider-cont">
+                        <a href="https://rich-react-notes.netlify.app/">
+                            <div class="slider">
+                                <div class="project-image-cont">
+                                    <img src="src/assets/project-images/notes-screenshots/Rich-React-Notes-screenshot-1.png" class="project-image project-image-slide slide-1" />
+                                    <img src="src/assets/project-images/notes-screenshots/Rich-React-Notes-screenshot-2.png" class="project-image project-image-slide slide-2" />
+                                    <img src="src/assets/project-images/notes-screenshots/Rich-React-Notes-screenshot-3.png" class="project-image project-image-slide slide-3" />
+                                    <img src="src/assets/project-images/notes-screenshots/Rich-React-Notes-screenshot-4.png" class="project-image project-image-slide slide-4 slide-4-notes" />
+                                    <img src="src/assets/project-images/notes-screenshots/Rich-React-Notes-screenshot-1.png" class="project-image project-image-slide slide-5" />
+                                </div>
+                            </div>
+                        </a>
+                        <div class="slide-buttons-cont">
+                            <button class="slide-button" id="slide-button-1">1</button>
+                            <button class="slide-button" id="slide-button-2">2</button>
+                            <button class="slide-button" id="slide-button-3">3</button>
+                            <button class="slide-button" id="slide-button-4">4</button>
+                        </div>
+                    </div>
+                    <div class="project-info project-info-slide">
                         <h2 class="project-heading">Rich React Notes</h2>
                         <h3 class="project-stack"> >> React.js • HTML • CSS << </h2>
                         <p class="project-description">Save and edit notes with this web app. Enhance them with rich text, image uploads, and media embeds. Filter notes through a search, and enjoy the animations and responsive CSS.</p>
@@ -189,7 +208,7 @@
                     
                     <div id="contact-form__personal-cont">
                         <input id="contact-form__name" name="Name" placeholder="Name" maxlength="100" autocomplete="given-name"></input>
-                        <input id="contact-form__email" name="Email" placeholder="Email" maxlength="100"></input>
+                        <input id="contact-form__email" name="Email" placeholder="Email" maxlength="100" autocomplete="email"></input>
                     </div>
                     <input id="contact-form__subject" name="Subject" placeholder="Subject" maxlength="200"></input>
                     <textarea id="contact-form__message" name="Message" placeholder="Message" maxlength="10000"></textarea>
@@ -225,9 +244,11 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.10.1/tsparticles.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="src/components/home/home.js"></script>
     <script src="src/components/particles-main-content.js"></script>
     <script src="src/components/nav-bar/nav-bar.js"></script>
+    <script src="src/components/projects/projects.js"></script>
     <script src="src/components/contact/contact.js"></script>
 </body>
 </html>

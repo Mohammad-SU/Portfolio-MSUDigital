@@ -5,7 +5,7 @@
   width: 100%;
   padding: 7px 20px 7px 14px;
   top: -1px;
-  z-index: 99999;
+  z-index: 100000000000000000000000000000000000000000000000;
   background-color: black;
   border: 1px solid lime;
   border-left: 0;
@@ -19,7 +19,6 @@
   margin: auto 0;
   margin-right: 11px;
   border-radius: 50%;
-  outline: 2px solid lime;
 }
 
 #nav-heading {

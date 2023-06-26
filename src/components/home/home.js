@@ -1,5 +1,5 @@
 /*
-- Add favicon
+- favicon SVG?
 - Add animations (Scrolling skills, typing/slide in animations for home sections/other text?)
 - Make responsive and suitable for mobile
 - Check if website looks good on other browsers (firefox, bing, opera, IE, etc.)
