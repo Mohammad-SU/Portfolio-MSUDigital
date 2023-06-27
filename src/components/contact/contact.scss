@@ -77,6 +77,7 @@
         background: black;
         color: lime;
         border: 3px dashed lime;
+        transition: text-shadow 330ms;
         font-family: inherit;
 
         #error-tooltip {
@@ -166,7 +167,8 @@
             background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
             background-size: 10px 3px, 10px 3px, 3px 10px, 3px 10px;
             background-position: left top, right bottom, left bottom, right top;
-            animation: border-dance 0.3s infinite linear, glow 0.7s ease-in-out infinite alternate;
+            animation: border-dance 0.3s infinite linear, glow-submit 0.7s ease-in-out 330ms infinite alternate;
+            text-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime;
 
             &::before {
                 transform: scaleX(1);
@@ -187,12 +189,12 @@
                 }
             }
 
-            @keyframes glow {
+            @keyframes glow-submit {
                 from {
-                    text-shadow: 0 0 10px lime, 0 0 20px lime, 0 0 30px lime, 0 0 40px lime, 0 0 50px lime, 0 0 60px lime, 0 0 70px lime;
+                    text-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime;
                 }
                 to {
-                    text-shadow: 0 0 30px lime, 0 0 40px lime, 0 0 50px lime, 0 0 60px lime, 0 0 70px lime, 0 0 80px lime, 0 0 90px lime;
+                    text-shadow: 0 0 10px lime, 0 0 15px lime, 0 0 20px lime, 0 0 25px lime;
                 }
             }
     }

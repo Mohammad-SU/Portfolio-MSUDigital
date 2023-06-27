@@ -12,35 +12,24 @@ tsParticles.load("particles-home", {
     fpsLimit: 65,
     particles: {
         number: {
-            value: 100
+            value: 105
         },
         color: {
-            value: "#00ff00",
-        },
-        shape: {
-            type: "images",
-            images: [
-                {
-                    src: "../../../src/assets/0.png"
-                },
-                {
-                    src: "../../../src/assets/1.png"
-                }
-            ]
+            value: "#00ff00"
         },
         size: {
-            value: {min: 3, max: 5},
+            value: 0
         },
         line_linked: {
             enable: true,
             opacity: 1,
-            distance: 120,
+            distance: 125,
             color: "#00ff00",
             width: 1,
             triangles: {
                 opacity: 0.3,
                 enable: true,
-                color: "#00ff00",
+                color: "#00ff00"
             }
         },
         move: {
@@ -81,4 +70,8 @@ $(window).scroll(function() {
         particles_home.play()
     }
 })
+
+setTimeout(function() {
+    $("#home-cta").addClass("home-cta__fade-in")
+}, 700)
 

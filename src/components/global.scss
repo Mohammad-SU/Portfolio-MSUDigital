@@ -8,12 +8,13 @@ html {
 
 body {
     font-family: monospace, 'roboto', sans-serif;
-    background-color: black;
+    background: black;
     color: lime;
     margin: 0;
     // Cursor icon - added green stroke - Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.
     cursor: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-12 -12 512 512' width='32' height='32'%3E%3C!--! Cursor icon - added green stroke - Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath stroke='lime' stroke-width='22px' d='M0 55.2V426c0 12.2 9.9 22 22 22c6.3 0 12.4-2.7 16.6-7.5L121.2 346l58.1 116.3c7.9 15.8 27.1 22.2 42.9 14.3s22.2-27.1 14.3-42.9L179.8 320H297.9c12.2 0 22.1-9.9 22.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6 37.9C34.3 34.1 28.9 32 23.2 32C10.4 32 0 42.4 0 55.2z'/%3E%3C/svg%3E") 
         1 0, auto;
+    overflow-x: hidden;
 }
 
     a:hover, button:hover {
@@ -74,7 +75,7 @@ body {
                 }
 
                 .section-content {
-                    padding-bottom: 77px;
+                    padding-bottom: 75px;
                 }
             }
         }
@@ -83,7 +84,7 @@ body {
                 font-size: 55px;
                 padding: 105px 0;
                 margin: 0 auto;
-                text-shadow: 0 0 20px lime, 0 0 30px lime, 0 0 40px lime, 0 0 50px lime, 0 0 60px lime;
+                text-shadow: 0 0 20px lime, 0 0 30px lime, 0 0 40px lime, 0 0 50px lime;
 
                 &::before {
                     content: '>>';

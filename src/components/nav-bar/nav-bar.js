@@ -1,4 +1,4 @@
-const navItems = $('.nav-item');
+const navItems = $('.nav-item')
   
 function navActive(entries, observer) { // Change highlighted nav-item depending on page position
     entries.forEach(entry => {
@@ -21,10 +21,10 @@ let options_2 = { // For projects section as it is longer
     threshold: 0.2,
 }
 
-let observerNav = new IntersectionObserver(navActive, options);
-observerNav.observe($('#home')[0]);
-observerNav.observe($('#about')[0]);
-observerNav.observe($('#contact')[0]);
+let observerNav = new IntersectionObserver(navActive, options)
+observerNav.observe($('#home')[0])
+observerNav.observe($('#about')[0])
+observerNav.observe($('#contact')[0])
 
-let observerNavProjects = new IntersectionObserver(navActive, options_2);
-observerNavProjects.observe($('#projects')[0]);
+let observerNavProjects = new IntersectionObserver(navActive, options_2)
+observerNavProjects.observe($('#projects')[0])

@@ -48,7 +48,7 @@
         &:hover {
             scale: 1.1;
             box-shadow: 0 0 20px 5px lime;
-            animation: glow 0.7s ease-in-out infinite alternate, glow-back-to-top 0.7s ease-in-out 330ms infinite alternate;
+            animation: glow-back-to-top 0.7s ease-in-out infinite alternate, glow-box-shadow 0.7s ease-in-out 330ms infinite alternate;
 
             &::before {
                 animation: spin 6s linear infinite;
@@ -59,7 +59,7 @@
                 transform: rotateZ(360deg); 
             }
         }
-        @keyframes glow {
+        @keyframes glow-back-to-top {
             from {
                 text-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime, 0 0 25px lime, 0 0 30px lime, 0 0 35px lime;
             }
@@ -67,7 +67,7 @@
                 text-shadow: 0 0 7px lime, 0 0 14px lime, 0 0 21px lime, 0 0 28px lime, 0 0 35px lime, 0 0 42px lime, 0 0 49px lime;
             }
         }
-        @keyframes glow-back-to-top {
+        @keyframes glow-box-shadow {
             from {
                 box-shadow: 0 0 20px 5px lime;
             }
