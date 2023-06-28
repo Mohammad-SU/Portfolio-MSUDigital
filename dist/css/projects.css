@@ -5,12 +5,26 @@
   outline: 3px dashed lime;
   margin: 102px 0;
   padding: 30px 27px;
+  overflow: hidden;
 }
 .project:first-child {
   margin-top: 0;
 }
 .project:last-child {
   margin-bottom: 0;
+}
+
+.slider-cont {
+  transition: transform 0.8s, opacity 0.8s;
+  opacity: 0;
+}
+
+.project-left .slider-cont {
+  transform: translateX(-30rem);
+}
+.project-left .slider-cont.projects__fade-in {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .slider {
@@ -39,24 +53,20 @@
 
 .project-image {
   height: 380px;
-  transition: transform 330ms;
+  transition: scale 330ms, transform 0.8s, opacity 0.8s;
   border: 8px solid black;
   outline: 3px dashed lime;
+  opacity: 0;
 }
 .project-image:hover {
-  transform: scale(0.985);
+  scale: 0.985;
 }
 
 .project-image-slide {
   position: relative;
   width: 779px;
+  height: 380px;
   float: left;
-  border: none;
-  outline: none;
-  transition: none;
-}
-.project-image-slide:hover {
-  transform: none;
 }
 
 .slide-4-notes {
@@ -142,6 +152,8 @@
   padding-bottom: 43px;
   background: black;
   outline: 3px dashed lime;
+  transition: transform 0.8s, opacity 0.8s;
+  opacity: 0;
 }
 
 .project-info-slide {
@@ -238,15 +250,39 @@
 .project-left {
   background: repeating-linear-gradient(45deg, lime, lime 2px, transparent 3px, transparent 80px);
 }
+.project-left .project-image {
+  transform: translateX(-30rem);
+}
+.project-left .project-image.projects__fade-in {
+  transform: translateX(0);
+  opacity: 1;
+}
 .project-left .project-info {
   margin-right: 0;
   margin-left: 27px;
+  transform: translateX(30rem);
+}
+.project-left .project-info.projects__fade-in {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .project-right {
   background: repeating-linear-gradient(135deg, lime, lime 2px, transparent 3px, transparent 80px);
 }
+.project-right .project-image {
+  transform: translateX(30rem);
+}
+.project-right .project-image.projects__fade-in {
+  transform: translateX(0);
+  opacity: 1;
+}
 .project-right .project-info {
   margin-right: 27px;
   margin-left: 0;
+  transform: translateX(-30rem);
+}
+.project-right .project-info.projects__fade-in {
+  transform: translateX(0);
+  opacity: 1;
 }/*# sourceMappingURL=projects.css.map */

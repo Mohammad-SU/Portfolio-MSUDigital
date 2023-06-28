@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
 }
 
 .skill-cont {
@@ -143,17 +144,17 @@
 
 #profile-icons-cont {
   position: relative;
-  bottom: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
   z-index: 1;
+  transform: translateY(-15rem);
   opacity: 0;
   transition: all 1.2s;
 }
 #profile-icons-cont.about__fade-in {
-  transform: translateY(3rem);
+  transform: translateY(0);
   opacity: 1;
 }
 
@@ -186,17 +187,17 @@
   position: relative;
   margin-top: 63px;
   margin-bottom: 0;
-  top: 3rem;
   width: 600px;
   font-size: 19px;
   line-height: 29px;
   text-align: center;
   background-color: black;
   border-radius: 60px;
+  transform: translateY(15rem);
   opacity: 0;
   transition: all 1.2s;
 }
 #profile-text.about__fade-in {
-  transform: translateY(-3rem);
+  transform: translateY(0);
   opacity: 1;
 }/*# sourceMappingURL=about.css.map */

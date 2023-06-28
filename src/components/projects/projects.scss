@@ -5,6 +5,7 @@
     outline: 3px dashed lime;
     margin: 102px 0;
     padding: 30px 27px;
+    overflow: hidden;
 
     &:first-child {
         margin-top: 0;
@@ -14,6 +15,20 @@
         margin-bottom: 0;
     }
 }
+
+    .slider-cont {
+        transition: transform 0.8s, opacity 0.8s;
+        opacity: 0;
+    }
+
+    .project-left .slider-cont {
+        transform: translateX(-30rem);
+
+        &.projects__fade-in {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 
     .slider {
         width: 778.7px;
@@ -40,25 +55,20 @@
         }
             .project-image {
                 height: 380px;
-                transition: transform 330ms;
+                transition: scale 330ms, transform 0.8s, opacity 0.8s;
                 border: 8px solid black;
                 outline: 3px dashed lime;
+                opacity: 0;
 
                 &:hover {
-                    transform: scale(0.985);
+                    scale: 0.985;
                 }
             }
             .project-image-slide {
                 position: relative;
                 width: 779px;
+                height: 380px;
                 float: left;
-                border: none;
-                outline: none;
-                transition: none;
-
-                &:hover {
-                    transform: none;
-                }
             }
             
             .slide-4-notes {
@@ -147,11 +157,13 @@
         padding-bottom: 43px;
         background: black;
         outline: 3px dashed lime;
+        transition: transform 0.8s, opacity 0.8s;
+        opacity: 0;
     }
     .project-info-slide {
         width: 611px;
     }
-
+    
         .project-heading {
             margin: 0;
             font-size: 43px;
@@ -255,9 +267,24 @@
         transparent 80px
     );
 
+    .project-image {
+        transform: translateX(-30rem);
+
+        &.projects__fade-in {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
     .project-info {
         margin-right: 0;
         margin-left: 27px;
+        transform: translateX(30rem);
+
+        &.projects__fade-in {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 }
 
@@ -270,8 +297,23 @@
         transparent 80px
     );
 
+    .project-image {
+        transform: translateX(30rem);
+
+        &.projects__fade-in {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
     .project-info {
         margin-right: 27px;
         margin-left: 0;
+        transform: translateX(-30rem);
+
+        &.projects__fade-in {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 }

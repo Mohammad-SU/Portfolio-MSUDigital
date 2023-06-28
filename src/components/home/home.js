@@ -1,12 +1,32 @@
 /*
 - favicon SVG?
-- Add animations (Scrolling skills, typing/slide in animations for home sections/other text?)
 - Make responsive and suitable for mobile
 - Check if website looks good on other browsers (firefox, bing, opera, IE, etc.)
 - Change demo links to google drive/dropbox, embed videos?
-- Make scroll lock to section/change scroll speed?
+- Make scroll lock to section/change scroll speed (for about)?
 - Netlify custom success page?
 */
+
+function homeFadeIn() {
+    if ($(window).scrollTop() < 500) {
+        $("#particles-home, #home-heading__line-1, #home-heading__line-2, #home-cta").addClass("home__fade-in")
+    }
+}
+$(window).scroll(homeFadeIn)
+homeFadeIn()
+
+$("#home-cta, #nav-item__about").on("click", function() {
+    aboutScrollAnimation = setTimeout(function() {
+        var scrollPosition = $("#about").offset().top + 146
+        window.scrollTo({top: scrollPosition, behavior: 'smooth'})
+    }, 900)
+
+    clearAboutScrollAnimation = setTimeout(function() { // If the scroll animation has been interrupted and is outside of the given range, timeout will be cleared
+        if ($(window).scrollTop() > $('#about').offset().top + 20 || $(window).scrollTop() < $('#about').offset().top - 20) {
+            clearTimeout(aboutTimeout)
+        }
+    }, 850)
+})
 
 tsParticles.load("particles-home", {
     fpsLimit: 65,
@@ -59,7 +79,7 @@ tsParticles.load("particles-home", {
     },
     retina_detect: true,
 });
-  
+
 const particles_home = tsParticles.domItem(0)
 
 $(window).scroll(function() {
@@ -70,8 +90,4 @@ $(window).scroll(function() {
         particles_home.play()
     }
 })
-
-setTimeout(function() {
-    $("#home-cta").addClass("home-cta__fade-in")
-}, 700)
 
