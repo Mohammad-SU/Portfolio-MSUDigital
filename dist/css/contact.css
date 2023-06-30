@@ -1,9 +1,20 @@
+#contact {
+  overflow: hidden;
+}
+
 #contact-text {
   font-size: 19.5px;
   margin: 0 auto;
   margin-bottom: 33px;
   width: -moz-fit-content;
   width: fit-content;
+  transform: translateY(-4rem);
+  transition: opacity 1s, transform 1s;
+  opacity: 0;
+}
+#contact-text.contact__fade-in {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 #contact-form {
@@ -20,6 +31,8 @@
   color: lime;
   background-color: black;
   border: 1px solid lime;
+  transition: opacity 1s, transform 1s;
+  opacity: 0;
 }
 #contact-form input:focus, #contact-form textarea:focus {
   outline: none;
@@ -41,10 +54,33 @@
 #contact-form__name, #contact-form__email {
   width: 45.5%;
 }
+#contact-form__name.contact__fade-in, #contact-form__email.contact__fade-in {
+  transition-delay: 0.2s;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+#contact-form__name {
+  transform: translateX(-20rem);
+}
+
+#contact-form__email {
+  transform: translateX(20rem);
+}
+
+#contact-form__subject {
+  transform: translateX(-20rem);
+}
+#contact-form__subject.contact__fade-in {
+  transition-delay: 0.4s;
+  transform: translateX(0);
+  opacity: 1;
+}
 
 #contact-form__message {
   resize: none;
   height: 140px;
+  transform: translateX(20rem);
 }
 #contact-form__message::-webkit-scrollbar-track {
   background: black;
@@ -59,6 +95,11 @@
 }
 #contact-form__message::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 255, 0, 0.332);
+}
+#contact-form__message.contact__fade-in {
+  transition-delay: 0.6s;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 #contact-form__submit-cont {
@@ -76,8 +117,15 @@
   background: black;
   color: lime;
   border: 3px dashed lime;
-  transition: text-shadow 330ms;
   font-family: inherit;
+  transition: text-shadow 330ms, opacity 1s, transform 1s;
+  transform: translateX(20rem);
+  opacity: 0;
+}
+#contact-form__submit.contact__fade-in {
+  transition-delay: 0.8s;
+  transform: translateX(0);
+  opacity: 1;
 }
 #contact-form__submit #error-tooltip {
   position: absolute;
@@ -156,8 +204,8 @@
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 10px 3px, 10px 3px, 3px 10px, 3px 10px;
   background-position: left top, right bottom, left bottom, right top;
-  animation: border-dance 0.3s infinite linear, glow-submit 0.7s ease-in-out 330ms infinite alternate;
   text-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime;
+  animation: border-dance 0.3s infinite linear, glow-submit 0.7s ease-in-out 330ms infinite alternate;
 }
 #contact-form__submit:hover::before {
   transform: scaleX(1);
@@ -192,6 +240,14 @@
   transform: scale(0.8);
   transform-origin: 0 0;
   border: 2px solid lime;
+  transition: opacity 1s, transform 1s;
+  transform: translateX(-20rem);
+  opacity: 0;
+}
+#contact-form__captcha.contact__fade-in {
+  transition-delay: 0.8s;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 iframe {

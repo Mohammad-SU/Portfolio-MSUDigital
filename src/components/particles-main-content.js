@@ -5,7 +5,7 @@ tsParticles.load("particles-main-content", {
     fpsLimit: 65,
     particles: {
         number: {
-            value: 15
+            value: 18
         },
         color: {
             value: "#00ff00",
@@ -26,8 +26,7 @@ tsParticles.load("particles-main-content", {
         },
         move: {
             enable: true,
-            speed: 0.5,
-            random: true,
+            speed: 0.2,
             straight: false
         }
     },

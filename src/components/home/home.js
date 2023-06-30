@@ -21,11 +21,11 @@ $("#home-cta, #nav-item__about").on("click", function() {
         window.scrollTo({top: scrollPosition, behavior: 'smooth'})
     }, 900)
 
-    clearAboutScrollAnimation = setTimeout(function() { // If the scroll animation has been interrupted and is outside of the given range, timeout will be cleared
-        if ($(window).scrollTop() > $('#about').offset().top + 20 || $(window).scrollTop() < $('#about').offset().top - 20) {
-            clearTimeout(aboutTimeout)
-        }
-    }, 850)
+    clearAboutScrollAnimation = setTimeout(function() { // If the scroll animation has been interrupted within ~890ms and is outside of the given range, timeout should be cleared
+            if ($(window).scrollTop() > $('#about').offset().top + 20 || $(window).scrollTop() < $('#about').offset().top - 20) {
+                clearTimeout(aboutScrollAnimation)
+            }
+    }, 890)
 })
 
 tsParticles.load("particles-home", {
