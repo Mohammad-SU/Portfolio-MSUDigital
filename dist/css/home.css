@@ -1,7 +1,7 @@
 .home-area {
   position: relative;
   height: 100dvh;
-  width: 100%;
+  width: 100dvw;
   z-index: 0;
   background: rgba(0, 0, 0, 0);
   pointer-events: none;
@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   height: 100dvh;
-  width: 100%;
+  width: 100dvw;
   top: 0;
   z-index: 2;
 }
@@ -30,7 +30,7 @@
   position: absolute;
   top: 0;
   height: 100dvh;
-  width: 100%;
+  width: 100dvw;
   z-index: 1;
   transition: opacity 4s;
   opacity: 0;
@@ -40,18 +40,33 @@
 }
 
 .home-heading {
-  font-size: 3.6rem;
+  font-size: clamp(2.8rem, 4.2vw, 3.6rem);
   margin: 0;
   z-index: 2;
   text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.5), 0 -2px 0 rgba(0, 0, 0, 0.5), 2px -2px 0 rgba(0, 0, 0, 0.5), 2px 0 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.5), 0 2px 0 rgba(0, 0, 0, 0.5), -2px 2px 0 rgba(0, 0, 0, 0.5), -2px 0 0 rgba(0, 0, 0, 0.5);
 }
 
 #home-heading__line-1 { /* Slide in/typing animation? */
-  margin-right: 15.625rem;
+  margin-right: 5em;
   margin-bottom: 6px;
   transition: opacity 1.4s, transform 1.4s;
-  transform: translateX(-10rem);
+  transform: translateX(-10em);
   opacity: 0;
+}
+@media (max-width: 1250px) {
+  #home-heading__line-1 {
+    margin-right: 3em;
+  }
+}
+@media (max-width: 1060px) {
+  #home-heading__line-1 {
+    margin-right: 0.25em;
+  }
+}
+@media (max-width: 990px) {
+  #home-heading__line-1 {
+    margin-right: 0em;
+  }
 }
 #home-heading__line-1.home__fade-in {
   transform: translateX(0);
@@ -59,10 +74,29 @@
 }
 
 #home-heading__line-2 {
-  margin-left: 15.625rem;
+  margin-left: 5em;
   transition: opacity 1.4s, transform 1.4s;
-  transform: translateX(8rem);
+  transform: translateX(8em);
   opacity: 0;
+}
+@media (max-width: 1250px) {
+  #home-heading__line-2 {
+    margin-left: 3em;
+  }
+}
+@media (max-width: 1060px) {
+  #home-heading__line-2 {
+    margin-left: 0.25em;
+  }
+}
+@media (max-width: 990px) {
+  #home-heading__line-2 {
+    width: 500px;
+    margin-left: 0;
+    text-align: center;
+    line-height: 65px;
+    line-clamp: 2;
+  }
 }
 #home-heading__line-2.home__fade-in {
   transform: translateX(0);
