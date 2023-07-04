@@ -40,15 +40,43 @@
 }
 
 .home-heading {
-  font-size: clamp(2.8rem, 4.2vw, 3.6rem);
+  font-size: clamp(3vw, 18px + 2.7vw, 6.5vw);
+  line-height: 1.5em;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
   margin: 0;
   z-index: 2;
-  text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.5), 0 -2px 0 rgba(0, 0, 0, 0.5), 2px -2px 0 rgba(0, 0, 0, 0.5), 2px 0 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.5), 0 2px 0 rgba(0, 0, 0, 0.5), -2px 2px 0 rgba(0, 0, 0, 0.5), -2px 0 0 rgba(0, 0, 0, 0.5);
+  text-shadow: -1.5px -1.5px 0 rgb(0, 0, 0), 0 -1.5px 0 rgb(0, 0, 0), 1.5px -1.5px 0 rgb(0, 0, 0), 1.5px 0 0 rgb(0, 0, 0), 1.5px 1.5px 0 rgb(0, 0, 0), 0 1.5px 0 rgb(0, 0, 0), -1.5px 1.5px 0 rgb(0, 0, 0), -1.5px 0 0 rgb(0, 0, 0);
+}
+@media (max-width: 990px) {
+  .home-heading {
+    font-size: calc(18px + 3.4vw);
+  }
+}
+@media (max-width: 610px) {
+  .home-heading {
+    font-size: calc(18px + 4.1vw);
+  }
+}
+@media (max-width: 475px) {
+  .home-heading {
+    font-size: calc(18px + 3.8vw);
+  }
+}
+@media (max-width: 400px) {
+  .home-heading {
+    font-size: calc(18px + 3.1vw);
+  }
+}
+@media (max-width: 320px) {
+  .home-heading {
+    font-size: calc(18px + 2.8vw);
+  }
 }
 
-#home-heading__line-1 { /* Slide in/typing animation? */
+#home-heading__line-1 {
   margin-right: 5em;
-  margin-bottom: 6px;
   transition: opacity 1.4s, transform 1.4s;
   transform: translateX(-10em);
   opacity: 0;
@@ -91,11 +119,20 @@
 }
 @media (max-width: 990px) {
   #home-heading__line-2 {
-    width: 500px;
+    width: 600px;
     margin-left: 0;
     text-align: center;
-    line-height: 65px;
     line-clamp: 2;
+  }
+}
+@media (max-width: 600px) {
+  #home-heading__line-2 {
+    width: 500px;
+  }
+}
+@media (max-width: 400px) {
+  #home-heading__line-2 {
+    width: 350px;
   }
 }
 #home-heading__line-2.home__fade-in {
@@ -110,8 +147,9 @@
   gap: 15px;
   padding: 12px 17px;
   font-size: 30px;
-  margin-top: 32px;
+  margin-top: 30px;
   z-index: 2;
+  scale: 1;
   color: inherit;
   font-family: inherit;
   border: 2px solid lime;
@@ -122,6 +160,26 @@
   transition: text-shadow 330ms, opacity 1.4s, transform 1.4s;
   transition-delay: 700ms;
   box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+  #home-cta {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  #home-cta {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 426px) {
+  #home-cta {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 375px) {
+  #home-cta {
+    margin-top: 0;
+  }
 }
 #home-cta:hover {
   padding: 13.5px 19px;
@@ -151,6 +209,12 @@
   }
   to {
     text-shadow: 0 0 10px lime, 0 0 15px lime, 0 0 20px lime, 0 0 25px lime;
+  }
+}
+
+@media (max-width: 410px) {
+  #home-cta__text {
+    font-size: 24px;
   }
 }
 
