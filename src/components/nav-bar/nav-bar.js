@@ -23,8 +23,35 @@ let options_2 = { // For projects section as it is longer
 
 let observerNav = new IntersectionObserver(navActive, options)
 observerNav.observe($('#home')[0])
-observerNav.observe($('#about')[0])
 observerNav.observe($('#contact')[0])
 
-let observerNavProjects = new IntersectionObserver(navActive, options_2)
-observerNavProjects.observe($('#projects')[0])
+function windowResizeNav() {
+    let observerNavAbout
+    let observerNavProjects
+
+    if ($(window).width() <= 1300) {
+        observerNavAbout = new IntersectionObserver(navActive, {
+            rootMargin: '0px',
+            threshold: 0.2,
+        })
+        observerNavAbout.observe($('#about')[0])
+
+        observerNavProjects = new IntersectionObserver(navActive, {
+            rootMargin: '0px',
+            threshold: 0.07,
+        })
+        observerNavProjects.observe($('#projects')[0])
+    }
+    if ($(window).width() > 1300) {
+        observerNavAbout = new IntersectionObserver(navActive, options)
+        observerNavAbout.observe($('#about')[0])
+
+        observerNavProjects = new IntersectionObserver(navActive, {
+            rootMargin: '0px',
+            threshold: 0.2,
+        })
+        observerNavProjects.observe($('#projects')[0])
+    }
+}
+$(window).on("resize", windowResizeNav)
+windowResizeNav()

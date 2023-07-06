@@ -1,5 +1,5 @@
 /*
-- fix overflow for 320px and check if site is suitable on that size
+- fix overflow for 320px and check if site is suitable on that size and sizes near it
 - favicon SVG?
 - Make responsive and suitable for mobile
 - Check if website looks good on other browsers (firefox, bing, opera, IE, etc.)
