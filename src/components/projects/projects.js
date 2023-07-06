@@ -44,6 +44,38 @@ function projectsFadeIn() {
 $(window).scroll(projectsFadeIn)
 projectsFadeIn()
 
+function windowResizeProjects() {
+    if ($(window).width() <= 1332 && $(window).width() >= 1301) {
+        $("#project-stack-connect").text(" >> JS/jQuery • HTML • CSS << ")
+    }
+    else {
+        $("#project-stack-connect").text(" >> JavaScript/jQuery • HTML • CSS << ")
+    }
+
+    if ($(window).width() <= 1380 && $(window).width() >= 1301) {
+        $(".project-live-app").text("APP")
+        $(".project-live-game").text("GAME")
+    }
+    else {
+        $(".project-live-app").text("LIVE APP")
+        $(".project-live-game").text("LIVE GAME")
+    }
+
+    let projectRightImageAnchors = document.querySelectorAll(".project-right__image-anchor")
+    let projectRightInfos = document.querySelectorAll(".project-right .project-info")
+
+    if ($(window).width() <= 1300) {
+        projectRightImageAnchors[0].after(projectRightInfos[0])
+        projectRightImageAnchors[1].after(projectRightInfos[1])
+    }
+    if ($(window).width() > 1300) {
+        projectRightImageAnchors[0].before(projectRightInfos[0])
+        projectRightImageAnchors[1].before(projectRightInfos[1])
+    }
+}
+$(window).on("resize", windowResizeProjects)
+windowResizeProjects()
+
 
 
 
