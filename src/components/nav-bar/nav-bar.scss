@@ -61,7 +61,7 @@
 
         .nav-item {
             font-size: 25px;
-            transition: text-shadow 330ms;
+            transition: text-shadow 330ms ease-in-out;
 
             &::before {
                 content: '>';
@@ -92,14 +92,14 @@
                 text-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime;
                 animation: glow-nav-bar 0.7s ease-in-out 330ms infinite alternate;
             }
-            @keyframes glow-nav-bar {
-                from {
-                    text-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime;
-                }
-                to {
-                    text-shadow: 0 0 9px lime, 0 0 14px lime, 0 0 19px lime, 0 0 24px lime;
-                }
-            }
+            // @keyframes glow-nav-bar {
+            //     from {
+            //         text-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime;
+            //     }
+            //     to {
+            //         text-shadow: 0 0 9px lime, 0 0 14px lime, 0 0 19px lime, 0 0 24px lime;
+            //     }
+            // }
 
             @media (max-width: 573px) {
                 font-size: clamp(8.33px, 8.33px + 2.8vw, 25px)

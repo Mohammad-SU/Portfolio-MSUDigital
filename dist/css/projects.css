@@ -114,7 +114,7 @@
   border: none;
   border: 0.125rem solid lime;
   box-shadow: 0 -0.0625rem 0.25rem rgba(0, 0, 0, 0.635);
-  transition: transform 330ms, text-shadow 330ms, box-shadow 330ms;
+  transition: transform 330ms ease-in-out, text-shadow 330ms ease-in-out, box-shadow 330ms ease-in-out;
   box-sizing: border-box;
 }
 @media (max-width: 768px) {
@@ -141,7 +141,8 @@
   border: none;
   transform: scale(1.1);
   box-shadow: 0 0 1.25rem 0.3125rem lime;
-  animation: glow-slide-button 0.7s ease-in-out 330ms infinite alternate, glow-shadow-slide-button 0.7s ease-in-out 330ms infinite alternate;
+  text-shadow: 0 0 0.3125rem lime, 0 0 0.625rem lime, 0 0 0.9375rem lime, 0 0 1.25rem lime, 0 0 1.5625rem lime, 0 0 1.875rem lime, 0 0 2.1875rem lime;
+  animation: glow-text-shadow-slide-button 0.7s ease-in-out 330ms infinite alternate, glow-box-shadow-slide-button 0.7s ease-in-out 330ms infinite alternate;
 }
 .slide-button:hover::before {
   border: 0.1875rem dashed lime;
@@ -152,20 +153,12 @@
     transform: rotateZ(360deg);
   }
 }
-@keyframes glow-slide-button {
+@keyframes glow-text-slide-button {
   from {
     text-shadow: 0 0 0.3125rem lime, 0 0 0.625rem lime, 0 0 0.9375rem lime, 0 0 1.25rem lime, 0 0 1.5625rem lime, 0 0 1.875rem lime, 0 0 2.1875rem lime;
   }
   to {
     text-shadow: 0 0 0.4375rem lime, 0 0 0.875rem lime, 0 0 1.3125rem lime, 0 0 1.75rem lime, 0 0 2.1875rem lime, 0 0 2.625rem lime, 0 0 3.0625rem lime;
-  }
-}
-@keyframes glow-shadow-slide-button {
-  from {
-    box-shadow: 0 0 1.25rem 0.3125rem lime;
-  }
-  to {
-    box-shadow: 0 0 1.25rem 0.5625rem lime;
   }
 }
 
@@ -215,7 +208,7 @@
 .project-live {
   padding: 0.625rem;
   border: 0.1875rem dashed lime;
-  transition: text-shadow 330ms;
+  transition: text-shadow 330ms ease-in-out;
 }
 .project-live:hover {
   padding: 0.775rem;
@@ -233,14 +226,6 @@
   }
   100% {
     background-position: left 10px top, right 10px bottom, left bottom 10px, right top 10px;
-  }
-}
-@keyframes glow-projects {
-  from {
-    text-shadow: 0 0 0.3125rem lime, 0 0 0.625rem lime, 0 0 0.9375rem lime, 0 0 1.25rem lime;
-  }
-  to {
-    text-shadow: 0 0 0.625rem lime, 0 0 0.9375rem lime, 0 0 1.25rem lime, 0 0 1.5625rem lime;
   }
 }
 
