@@ -55,7 +55,7 @@ html {
 }
 
 body {
-  font-family: Consolas, monospace, "Dejavu Sans Mono", sans-serif, Courier;
+  font-family: "consolas", "Dejavu Sans Mono", sans-serif, Courier;
   font-weight: normal;
   font-style: normal;
   background: black;
