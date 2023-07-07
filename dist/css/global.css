@@ -1,3 +1,4 @@
+@import url("https://fontlibrary.org/face/dejavu-sans-mono");
 :root {
   color-scheme: dark;
 }
@@ -54,7 +55,9 @@ html {
 }
 
 body {
-  font-family: monospace, "roboto", sans-serif;
+  font-family: Consolas, monospace, "Dejavu Sans Mono", sans-serif, Courier;
+  font-weight: normal;
+  font-style: normal;
   background: black;
   color: lime;
   margin: 0;
