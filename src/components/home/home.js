@@ -132,15 +132,11 @@ $(window).scroll(function() {
 })
 
 $("#home-cta, #nav-item__about").on("click", function() {
-    aboutScrollAnimation = setTimeout(function() {
-        var scrollPosition = $("#about").offset().top + 146
-        window.scrollTo({top: scrollPosition, behavior: 'smooth'})
+    setTimeout(function() { // Causes site to scroll down from "about" heading for better view of "about" content if conditions filled
+        if ($(window).scrollTop() < $('#about').offset().top + 100 && $(window).scrollTop() > $('#about').offset().top - 100) {
+            var scrollPosition = $("#about").offset().top + 146
+            window.scrollTo({top: scrollPosition, behavior: 'smooth'})    
+        }
     }, 900)
-
-    clearAboutScrollAnimation = setTimeout(function() { // If the scroll animation has been interrupted within ~890ms and is outside of the given range, timeout should be cleared
-            if ($(window).scrollTop() > $('#about').offset().top + 20 || $(window).scrollTop() < $('#about').offset().top - 20) {
-                clearTimeout(aboutScrollAnimation)
-            }
-    }, 890)
 })
 

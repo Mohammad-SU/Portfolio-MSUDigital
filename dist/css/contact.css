@@ -1,11 +1,16 @@
 #contact {
   overflow: hidden;
 }
+@media (max-width: 850px) {
+  #contact .section-content {
+    scale: 1.3;
+  }
+}
 
 #contact-text {
-  font-size: 19.5px;
+  font-size: 1.2188rem;
   margin: 0 auto;
-  margin-bottom: 33px;
+  margin-bottom: 2.0625rem;
   width: -moz-fit-content;
   width: fit-content;
   transform: translateY(-4rem);
@@ -20,17 +25,17 @@
 #contact-form {
   display: flex;
   flex-direction: column;
-  gap: 13px;
-  width: 600px;
+  gap: 0.8125rem;
+  width: 37.5rem;
   margin: 0 auto;
 }
 #contact-form input, #contact-form textarea {
-  padding: 0.5em;
+  padding: 0.5rem;
   font-family: inherit;
-  font-size: 19px;
+  font-size: 1.1875rem;
   color: lime;
   background-color: black;
-  border: 1px solid lime;
+  border: 0.0625rem solid lime;
   transition: opacity 1s, transform 1s;
   opacity: 0;
 }
@@ -79,19 +84,19 @@
 
 #contact-form__message {
   resize: none;
-  height: 140px;
+  height: 8.75rem;
   transform: translateX(20rem);
 }
 #contact-form__message::-webkit-scrollbar-track {
   background: black;
   outline: none;
-  border-left: 2px dashed lime;
+  border-left: 0.125rem dashed lime;
 }
 #contact-form__message::-webkit-scrollbar-thumb {
   background-color: black;
   outline: none;
-  border: 2px solid lime;
-  border-right: 1px solid lime;
+  border: 0.125rem solid lime;
+  border-right: 0.0625rem solid lime;
 }
 #contact-form__message::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 255, 0, 0.332);
@@ -111,12 +116,12 @@
 #contact-form__submit {
   display: inline-block;
   position: relative;
-  width: 115px;
-  font-size: 22px;
-  padding: 10px;
+  width: 7.1875rem;
+  font-size: 1.375rem;
+  padding: 0.625rem;
   background: black;
   color: lime;
-  border: 3px dashed lime;
+  border: 0.1875rem dashed lime;
   font-family: inherit;
   transition: text-shadow 330ms ease-in-out, opacity 1s ease 0.8s, transform 1s ease 0.8s;
   transform: translateX(20rem);
@@ -128,44 +133,44 @@
 }
 #contact-form__submit #error-tooltip {
   position: absolute;
-  font-size: 14px;
-  width: 170px;
+  font-size: 0.875rem;
+  width: 10.625rem;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 7px 17px;
-  top: -20px;
+  padding: 0.4375rem 1.0625rem;
+  top: -1.25rem;
   left: 50%;
   z-index: 9999;
   transform: translate(-50%, -100%);
   color: #00FF00;
   background-color: #000000;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   box-sizing: border-box;
-  border: 1px solid #00FF00;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  border: 0.0625rem solid #00FF00;
+  box-shadow: 0 0.0625rem 0.5rem rgba(0, 0, 0, 0.5);
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.8s;
 }
 #contact-form__submit #error-arrow {
   position: absolute;
-  width: 24px;
-  height: 12px;
+  width: 1.5rem;
+  height: 0.75rem;
   top: 100%;
   left: 50%;
-  margin-left: -12px;
+  margin-left: -0.75rem;
   overflow: hidden;
 }
 #contact-form__submit #error-arrow::after {
   content: "";
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 0.75rem;
+  height: 0.75rem;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
   background-color: #000000;
-  border: 1px solid #00FF00;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  border: 0.0625rem solid #00FF00;
+  box-shadow: 0 0.0625rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 #contact-form__submit:disabled:hover {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-20 -20 612 612' width='32' height='32'%3E%3C!--! Cursor icon - added green stroke - Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath stroke='lime' stroke-width='22px' d='M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z'/%3E%3C/svg%3E") 12 12, auto;
@@ -177,10 +182,10 @@
 #contact-form__submit::before {
   content: ">>";
   position: absolute;
-  font-size: 50px;
-  margin-top: -19.2px;
-  margin-left: -73.6px;
-  letter-spacing: -7px;
+  font-size: 3.125rem;
+  margin-top: -1.2rem;
+  margin-left: -4.6rem;
+  letter-spacing: -0.4375rem;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
   transform-origin: 100% 50%;
@@ -188,13 +193,18 @@
 #contact-form__submit::after {
   content: "<<";
   position: absolute;
-  font-size: 50px;
-  margin-top: -19.2px;
-  margin-left: 25.6px;
-  letter-spacing: -7px;
+  font-size: 3.125rem;
+  margin-top: -1.2rem;
+  margin-left: 1.6rem;
+  letter-spacing: -0.4375rem;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
   transform-origin: 0% 50%;
+}
+@media (max-width: 715px) {
+  #contact-form__submit::after {
+    display: none;
+  }
 }
 #contact-form__submit:hover {
   padding: 12.4px;
@@ -225,12 +235,12 @@
 
 #contact-form__captcha {
   overflow: hidden;
-  width: 297px;
-  height: 72px;
-  margin-bottom: -15px;
+  width: 18.5625rem;
+  height: 4.5rem;
+  margin-bottom: -0.9375rem;
   transform: scale(0.8);
   transform-origin: 0 0;
-  border: 1px solid lime;
+  border: 0.0625rem solid lime;
   transition: opacity 1s, transform 1s;
   transform: translateX(-20rem);
   opacity: 0;
