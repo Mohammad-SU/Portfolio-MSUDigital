@@ -57,6 +57,9 @@
             gap: 8vw;
             margin-left: 0;
         }
+        @media (max-width: 350px) {
+            gap: 7.5vw;
+        }
     }
 
         .nav-item {
@@ -103,6 +106,9 @@
 
             @media (max-width: 573px) {
                 font-size: clamp(8.33px, 8.33px + 2.8vw, 25px)
+            }
+            @media (max-width: 350px) {
+                font-size: clamp(8.33px, 8.33px + 2.5vw, 25px)
             }
         }
 

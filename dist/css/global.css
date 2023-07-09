@@ -102,7 +102,7 @@ a {
 #particles-main-content {
   position: sticky;
   top: 0;
-  height: 100dvh;
+  height: 100vh;
   width: 100%;
   background: black;
   z-index: -1;
@@ -113,20 +113,11 @@ a {
   z-index: -1;
 }
 
-section:last-child .section-heading {
-  padding-bottom: 40px;
-  padding-top: 90px;
-}
-section:last-child .section-content {
-  padding-bottom: 75px;
-}
-
 .section-heading {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 55px;
-  padding: 105px 0;
-  margin: 0 auto;
+  margin: 6.5625rem auto;
   text-shadow: 0 0 20px lime, 0 0 30px lime, 0 0 40px lime, 0 0 50px lime;
 }
 .section-heading::before {
@@ -143,7 +134,53 @@ section:last-child .section-content {
   margin-left: 11.2px;
   letter-spacing: -7px;
 }
+@media (max-width: 850px) {
+  .section-heading {
+    scale: 0.9;
+  }
+}
+@media (max-width: 540px) {
+  .section-heading {
+    scale: 0.88;
+  }
+}
+@media (max-width: 425px) {
+  .section-heading {
+    scale: 0.77;
+  }
+}
+@media (max-width: 375px) {
+  .section-heading {
+    scale: 0.73;
+  }
+}
+@media (max-width: 320px) {
+  .section-heading {
+    scale: 0.7;
+  }
+}
 
 #about-heading {
-  margin-top: -100dvh;
+  margin-top: -100vh;
+  padding-top: 6.5625rem;
+}
+
+#contact-heading {
+  margin-top: 6.2rem;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 850px) {
+  #contact-heading {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+}
+
+#contact-content {
+  padding-bottom: 4.6875rem;
+}
+@media (max-width: 850px) {
+  #contact-content {
+    padding-bottom: 8rem;
+  }
 }/*# sourceMappingURL=global.css.map */

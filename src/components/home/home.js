@@ -66,7 +66,7 @@ function windowResizeHome() {
     }
 
     tsParticles.load("particles-home", {
-        fpsLimit: 65,
+        fpsLimit: 60,
         particles: {
             number: {
                 value: homeParticleNum

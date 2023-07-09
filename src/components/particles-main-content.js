@@ -2,7 +2,7 @@ tsParticles.load("particles-main-content", {
     fullScreen: {
         enable: false
     },
-    fpsLimit: 65,
+    fpsLimit: 60,
     particles: {
         number: {
             value: 18
