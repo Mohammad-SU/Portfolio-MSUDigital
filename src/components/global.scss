@@ -154,7 +154,10 @@ body {
                     padding-bottom: 4.6875rem;
 
                     @media (max-width: 850px) {
-                        padding-bottom: 8rem;
-                    }              
+                        padding-bottom: 9rem;
+                    }
+                    @media (max-width: 440px) {
+                        padding-bottom: 12rem;
+                    }                  
                 }
 

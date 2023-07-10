@@ -1,7 +1,8 @@
 /*
-- fix overflow for 320px and check if site is suitable on that size and sizes near it
+- Make projects and contact section better for 320px window width
+- Edit scroll to section if needed for about
+- Fix top of background image of profile cont being cut off on small screens
 - favicon SVG?
-- Make responsive and suitable for mobile
 - Check if website looks good on other browsers (firefox, bing, opera, IE, etc.)
 - Change demo links to google drive/dropbox, embed videos?
 - Make scroll lock to section/change scroll speed (for about)?

@@ -181,6 +181,11 @@ a {
 }
 @media (max-width: 850px) {
   #contact-content {
-    padding-bottom: 8rem;
+    padding-bottom: 9rem;
+  }
+}
+@media (max-width: 440px) {
+  #contact-content {
+    padding-bottom: 12rem;
   }
 }/*# sourceMappingURL=global.css.map */

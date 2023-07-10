@@ -34,8 +34,8 @@
         padding: 0.5rem;
         font-family: inherit;
         font-size: 1.1875rem;
-        color: lime;
-        background-color: black;
+        color: lime !important;
+        background-color: black !important;
         border: .0625rem solid lime;
         transition: opacity 1s, transform 1s;
         opacity: 0;
@@ -264,23 +264,53 @@
         width: 18.5625rem;
         height: 4.5rem;
         margin-bottom: -0.9375rem;
-        transform: scale(0.8);
-        transform-origin: 0 0;
         border: .0625rem solid lime;
         transition: opacity 1s, transform 1s;
         transform: translateX(-20rem);
         opacity: 0;
+        box-sizing: border-box;
 
         &.contact__fade-in {
             transition-delay: 0.8s;
             transform: translateX(0);
             opacity: 1;
-        }    
+        }
+        
+        iframe {
+            margin: -2px 0px 0px -2px;
+            transform-origin: 0 0;
+
+            @media (max-width: 850px) {
+                transform: scale(0.9);
+            }
+            @media (max-width: 769px) {
+                transform: scale(0.75);
+            }
+            @media (max-width: 635px) {
+                transform: scale(0.63);
+            }
+            @media (max-width: 526px) {
+                transform: scale(0.56);
+            }
+            @media (max-width: 475px) {
+                transform: scale(0.5);
+            }
+            @media (max-width: 421px) {
+                transform: scale(0.48);
+            }
+            @media (max-width: 405px) {
+                transform: scale(0.45);
+            }
+            @media (max-width: 374px) {
+                transform: scale(0.425);
+            }
+            @media (max-width: 355px) {
+                transform: scale(0.41);
+            }
+        }
     }
 
-    iframe {
-        margin: -2px 0px 0px -2px;  
-    }
+
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { 
     transition-delay: 3600s; // Prevent autofill from changing background and text color
