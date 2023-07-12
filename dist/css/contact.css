@@ -152,6 +152,13 @@
   opacity: 0;
   transition: opacity 0.8s;
 }
+@media (max-width: 650px) {
+  #contact-form__submit #error-tooltip {
+    transform-origin: 0 0;
+    scale: 0.85;
+    font-size: 1rem;
+  }
+}
 #contact-form__submit #error-arrow {
   position: absolute;
   width: 1.5rem;
@@ -207,13 +214,13 @@
   }
 }
 #contact-form__submit:hover {
-  padding: 12.4px;
+  padding: 0.775rem;
   border: none;
   background-image: linear-gradient(90deg, lime 60%, transparent 40%), linear-gradient(90deg, lime 60%, transparent 40%), linear-gradient(0deg, lime 60%, transparent 40%), linear-gradient(0deg, lime 60%, transparent 40%);
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-  background-size: 10px 3px, 10px 3px, 3px 10px, 3px 10px;
+  background-size: 0.625rem 0.1875rem, 0.625rem 0.1875rem, 0.1875rem 0.625rem, 0.1875rem 0.625rem;
   background-position: left top, right bottom, left bottom, right top;
-  text-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime;
+  text-shadow: 0 0 0.3125rem lime, 0 0 0.625rem lime, 0 0 0.9375rem lime, 0 0 1.25rem lime;
   animation: border-dance 0.3s infinite linear, glow-submit 0.7s ease-in-out 330ms infinite alternate;
 }
 #contact-form__submit:hover::before {
@@ -229,7 +236,7 @@
     background-position: left top, right bottom, left bottom, right top;
   }
   100% {
-    background-position: left 10px top, right 10px bottom, left bottom 10px, right top 10px;
+    background-position: left 0.625rem top, right 0.625rem bottom, left bottom 0.625rem, right top 0.625rem;
   }
 }
 
@@ -252,6 +259,11 @@
 #contact-form__captcha iframe {
   margin: -2px 0px 0px -2px;
   transform-origin: 0 0;
+}
+@media (min-width: 2000px) {
+  #contact-form__captcha iframe {
+    transform: scale(1.3);
+  }
 }
 @media (max-width: 850px) {
   #contact-form__captcha iframe {
@@ -296,6 +308,11 @@
 @media (max-width: 355px) {
   #contact-form__captcha iframe {
     transform: scale(0.41);
+  }
+}
+@media (max-width: 340px) {
+  #contact-form__captcha iframe {
+    transform: scale(0.385);
   }
 }
 

@@ -1,3 +1,5 @@
+// Check home.js for #nav-item__about delay
+
 const navItems = $('.nav-item')
   
 function navActive(entries, observer) { // Change highlighted nav-item depending on page position
@@ -38,7 +40,7 @@ function windowResizeNav() {
 
         observerNavProjects = new IntersectionObserver(navActive, {
             rootMargin: '0px',
-            threshold: 0.07,
+            threshold: 0.12,
         })
         observerNavProjects.observe($('#projects')[0])
     }
@@ -52,6 +54,8 @@ function windowResizeNav() {
         })
         observerNavProjects.observe($('#projects')[0])
     }
+
+    console.log(observerNavAbout)
 }
 $(window).on("resize", windowResizeNav)
 windowResizeNav()

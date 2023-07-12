@@ -9,6 +9,9 @@ html {
         1 0, auto;
     overflow-x: hidden;
 
+    @media (min-width: 2000px) {
+        font-size: 21px;
+    }
     @media (max-width: 850px) {
         font-size: 14.6px;
     }
@@ -36,10 +39,13 @@ html {
     @media (max-width: 355px) {
         font-size: 6.5px;
     }
+    @media (max-width: 340px) {
+        font-size: 6.1px;
+    }
 }
 
 body {
-    font-family: Consolas, Courier;
+    font-family: consolas, monospace, Courier;
     font-weight: normal;
     font-style: normal;
     background: black;
@@ -100,7 +106,8 @@ body {
             .section-heading {
                 width: fit-content;
                 font-size: 55px;
-                margin: 6.5625rem auto;
+                margin: 0 auto;
+                padding: 6.5625rem 0;
                 text-shadow: 0 0 20px lime, 0 0 30px lime, 0 0 40px lime, 0 0 50px lime;
 
                 &::before {
@@ -119,6 +126,9 @@ body {
                     letter-spacing: -7px;
                 }
 
+                @media (min-width: 2000px) {
+                    scale: 1.7;
+                }
                 @media (max-width: 850px) {
                     scale: 0.9;
                 }
@@ -137,16 +147,18 @@ body {
             }
                 #about-heading {
                     margin-top: -100vh;
-                    padding-top: 6.5625rem;
                 }
 
                 #contact-heading {
-                    margin-top: 6.2rem;
-                    margin-bottom: 2.5rem;
+                    padding-top: 6.2rem;
+                    padding-bottom: 2.5rem;
                     
+                    @media (min-width: 850px) {
+                        padding-bottom: 3.5rem;
+                    }
                     @media (max-width: 850px) {
-                        margin-top: 8rem;
-                        margin-bottom: 8rem;
+                        padding-top: 8rem;
+                        padding-bottom: 8rem;
                     }
                 }
 

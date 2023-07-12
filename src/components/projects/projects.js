@@ -1,29 +1,40 @@
+let rem = function (count) {
+    let unit = $('html').css('font-size')
+
+    if (typeof count !== 'undefined') {
+        return (parseFloat(unit) * count)
+    }
+    else {
+        return parseFloat(unit)
+    }
+}
+
 var projectSlideAnimation_timeout
-let translateNum = -779
+let translateNum = rem(-48.6875)
 
 function setAnimation(functionName, time) {
     projectSlideAnimation_timeout = setTimeout(functionName, time)
 }
 
 function projectSlideAnimation () {
-    if (translateNum == -3895) {
+    if (translateNum == rem(-243.4375)) { // if img 5 is reached (duplicate of first img)
         $(".project-image-cont").css({transition: "none", transform: "translate(0px)"})
-        translateNum = -779
+        translateNum = rem(-48.6875)
         setAnimation(projectSlideAnimation, 25)
     }
-    else if (translateNum > -3895) {
+    else if (translateNum > rem(-243.4375)) {
         $(".project-image-cont").css({transition: "transform 700ms", transform: "translate("+translateNum+"px)"})
-        translateNum -= 779
+        translateNum -= rem(48.6875)
         setAnimation(projectSlideAnimation, 3000)
     }
 }
 
 $(".slide-button").on("click", function() {
-    translateNum = parseInt($(this).text()) * -779 + 779 // Addition due to duplicate of first image
+    translateNum = parseInt($(this).text()) * rem(-48.6875) + rem(48.6875) // Addition due to duplicate of first img
     $(".project-image-cont").css({transition: "transform 700ms", transform: "translate("+translateNum+"px)"})
     clearTimeout(projectSlideAnimation_timeout)
     setAnimation(projectSlideAnimation, 8000)
-    translateNum -= 779
+    translateNum -= rem(48.6875)
 })
 
 function projectsFadeIn() {
@@ -45,6 +56,13 @@ $(window).scroll(projectsFadeIn)
 projectsFadeIn()
 
 function windowResizeProjects() {
+    clearTimeout(projectSlideAnimation_timeout)
+    translateNum = 0
+    $(".project-image-cont").css({transition: "transform 700ms", transform: "translate("+translateNum+"px)"})
+    if ($("#project-1 .slider-cont").hasClass("projects__fade-in")) {
+        setAnimation(projectSlideAnimation, 3000)
+    }
+
     if ($(window).width() <= 1332 && $(window).width() >= 1301) {
         $("#project-stack-connect").text(" >> JS/jQuery • HTML • CSS << ")
     }

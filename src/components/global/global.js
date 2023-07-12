@@ -33,10 +33,9 @@ tsParticles.load("particles-main-content", {
     interactivity: {
         detectsOn: "window"
     },
-    retina_detect: true,
-});
+    retina_detect: false,
+})
   
-
 const particles_main_content = tsParticles.domItem(1)
 
 $(window).scroll(function() {

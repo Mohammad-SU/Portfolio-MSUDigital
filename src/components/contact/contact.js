@@ -1,7 +1,7 @@
 const submitButton = $("#contact-form__submit")
 const errorText = $("#error-text")
 
-let captchaState = "invalid"
+let captchaState = ""
 let formState = ""
 
 function captchaCompleted() {
@@ -54,7 +54,7 @@ submitButton.on("pointerenter", function() {
 function contactFadeIn() {
     if ($(window).scrollTop() >= $('#contact').offset().top - 500 && !$("#contact-text").hasClass("contact__fade-in")) {
         $("#contact-text, #contact-form__name, #contact-form__subject, #contact-form__email, #contact-form__message, #contact-form__captcha, #contact-form__submit").addClass("contact__fade-in")
-    }    
+    }
 }
 $(window).scroll(contactFadeIn)
 contactFadeIn()
