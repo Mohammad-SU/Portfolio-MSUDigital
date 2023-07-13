@@ -54,8 +54,6 @@ function windowResizeNav() {
         })
         observerNavProjects.observe($('#projects')[0])
     }
-
-    console.log(observerNavAbout)
 }
 $(window).on("resize", windowResizeNav)
 windowResizeNav()

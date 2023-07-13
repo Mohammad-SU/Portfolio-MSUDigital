@@ -52,7 +52,7 @@ submitButton.on("pointerenter", function() {
 })
 
 function contactFadeIn() {
-    if ($(window).scrollTop() >= $('#contact').offset().top - 500 && !$("#contact-text").hasClass("contact__fade-in")) {
+    if (viewportVis($("#contact")) && !$("#contact-text").hasClass("contact__fade-in")) {
         $("#contact-text, #contact-form__name, #contact-form__subject, #contact-form__email, #contact-form__message, #contact-form__captcha, #contact-form__submit").addClass("contact__fade-in")
     }
 }

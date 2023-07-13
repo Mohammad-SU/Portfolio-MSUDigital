@@ -1,14 +1,3 @@
-let rem = function (count) {
-    let unit = $('html').css('font-size')
-
-    if (typeof count !== 'undefined') {
-        return (parseFloat(unit) * count)
-    }
-    else {
-        return parseFloat(unit)
-    }
-}
-
 var projectSlideAnimation_timeout
 let translateNum = rem(-48.6875)
 
@@ -38,17 +27,17 @@ $(".slide-button").on("click", function() {
 })
 
 function projectsFadeIn() {
-        if ($(window).scrollTop() >= $('#projects').offset().top - 300 && $(window).scrollTop() < $('#project-1').offset().top + 250 && !$("#project-1 .slider-cont").hasClass("projects__fade-in")) {
+        if (viewportVis($("#project-1")) && !$("#project-1 .slider-cont").hasClass("projects__fade-in")) {
             $("#project-1 .slider-cont, #project-1 .project-info").addClass("projects__fade-in")
             setAnimation(projectSlideAnimation, 3000)
         } 
-        if ($(window).scrollTop() >= $('#project-1').offset().top && $(window).scrollTop() < $('#project-2').offset().top + 150 && !$("#project-2 .project-info").hasClass("projects__fade-in")) {
+        if (viewportVis($("#project-2")) && !$("#project-2 .project-info").hasClass("projects__fade-in")) {
             $("#project-2 .project-image, #project-2 .project-info").addClass("projects__fade-in")
         }        
-        if ($(window).scrollTop() >= $('#project-2').offset().top && $(window).scrollTop() < $('#project-3').offset().top + 150 && !$("#project-3 .project-info").hasClass("projects__fade-in")) {
+        if (viewportVis($("#project-3")) && !$("#project-3 .project-info").hasClass("projects__fade-in")) {
             $("#project-3 .project-image, #project-3 .project-info").addClass("projects__fade-in")
         }
-        if ($(window).scrollTop() >= $('#project-3').offset().top && $(window).scrollTop() < $('#project-4').offset().top + 150 && !$("#project-4 .project-info").hasClass("projects__fade-in")) {
+        if (viewportVis($("#project-4")) && !$("#project-4 .project-info").hasClass("projects__fade-in")) {
             $("#project-4 .project-image, #project-4 .project-info").addClass("projects__fade-in")
         }    
 }

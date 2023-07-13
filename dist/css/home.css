@@ -49,6 +49,11 @@
   z-index: 2;
   text-shadow: -1.5px -1.5px 0 rgb(0, 0, 0), 0 -1.5px 0 rgb(0, 0, 0), 1.5px -1.5px 0 rgb(0, 0, 0), 1.5px 0 0 rgb(0, 0, 0), 1.5px 1.5px 0 rgb(0, 0, 0), 0 1.5px 0 rgb(0, 0, 0), -1.5px 1.5px 0 rgb(0, 0, 0), -1.5px 0 0 rgb(0, 0, 0);
 }
+@media (min-width: 2000px) {
+  .home-heading {
+    font-size: calc(18px + 3.5vw);
+  }
+}
 @media (max-width: 990px) {
   .home-heading {
     font-size: calc(18px + 3.4vw);
@@ -159,6 +164,11 @@
   transform: translateY(5rem);
   transition: text-shadow 330ms ease-in-out, opacity 1.4s ease 0.7s, transform 1.4s ease 0.7s;
   box-sizing: border-box;
+}
+@media (min-width: 2000px) {
+  #home-cta {
+    margin-top: 70px;
+  }
 }
 @media (max-width: 1024px) {
   #home-cta {

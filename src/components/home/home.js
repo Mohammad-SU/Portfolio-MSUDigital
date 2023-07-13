@@ -1,6 +1,7 @@
 /*
-- Edit scroll to section if needed for about
-- Fix top of background image of profile cont being cut off on small screens
+- particle size 2000px
+- change hover animations to click for mobile
+- fix consolas font not working on some browsers
 - favicon SVG?
 - Check if website looks good on other browsers (firefox, bing, opera, IE, etc.)
 - Change demo links to google drive/dropbox, embed videos?
@@ -8,7 +9,7 @@
 */
 
 function homeFadeIn() {
-    if ($(window).scrollTop() < 500) {
+    if ($(window).scrollTop() < 500 || viewportVis($("#home"))) {
         $("#particles-home, #home-heading__line-1, #home-heading__line-2, #home-cta").addClass("home__fade-in")
     }
 }
@@ -119,7 +120,7 @@ function windowResizeHome() {
 $(window).on("resize", windowResizeHome)
 windowResizeHome()
 
-const particles_home = tsParticles.domItem(0)
+const particles_home = tsParticles.domItem(1)
 
 $(window).scroll(function() {
     if ($(window).scrollTop() > $('#home-cont').height()) {
@@ -132,8 +133,8 @@ $(window).scroll(function() {
 
 $("#home-cta, #nav-item__about").on("click", function() {
     setTimeout(function() { // Causes site to scroll down from "about" heading for better view of "about" content if conditions filled
-        if ($(window).scrollTop() < $('#about').offset().top + 100 && $(window).scrollTop() > $('#about').offset().top - 100) {
-            var scrollPosition = $("#about").offset().top + 146
+        if ($(window).scrollTop() < $('#about').offset().top + rem(6.25) && $(window).scrollTop() > $('#about').offset().top - rem(6.25)) {
+            var scrollPosition = $("#about").offset().top + rem(9.125)
             window.scrollTo({top: scrollPosition, behavior: 'smooth'})    
         }
     }, 900)
