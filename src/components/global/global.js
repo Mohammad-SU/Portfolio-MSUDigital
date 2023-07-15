@@ -1,5 +1,5 @@
 var width = $(window).width()
-$(window).on('resize', function() {
+$(window).on('resize', function() { // If window width is resized, run functions
     if ($(this).width() !== width) {
         width = $(this).width()
         windowResizeHome()
