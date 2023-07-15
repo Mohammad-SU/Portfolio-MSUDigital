@@ -215,7 +215,12 @@ a {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 3000px) and (min-width: 769px) {
+  #about, #projects {
+    scroll-margin-top: -20px;
+  }
+}
+@media (max-width: 635px) {
   #about, #projects {
     scroll-margin-top: 25px;
   }
@@ -224,4 +229,8 @@ a {
   #about, #projects {
     scroll-margin-top: 30px;
   }
+}
+
+#contact {
+  scroll-margin-top: -1000px;
 }/*# sourceMappingURL=global.css.map */
