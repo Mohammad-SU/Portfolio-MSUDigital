@@ -103,6 +103,10 @@
 }
 
 .slide-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   position: relative;
   width: 2.5rem;
   height: 2.5rem;
@@ -125,6 +129,11 @@
 @media (max-width: 525px) {
   .slide-button {
     scale: 1.5;
+  }
+}
+@media (max-width: 350px) {
+  .slide-button {
+    scale: 1.6;
   }
 }
 .slide-button::before {

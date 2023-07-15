@@ -100,6 +100,10 @@
         }
 
             .slide-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
                 position: relative;
                 width: 2.5rem;
                 height: 2.5rem;
@@ -120,6 +124,9 @@
                 @media (max-width: 525px) {
                     scale: 1.5;
                 }
+                @media (max-width: 350px) {
+                    scale: 1.6;
+                }
 
                 &::before {
                     content: '';
@@ -132,7 +139,7 @@
                     box-sizing: border-box;
                 }
                 
-                &:hover {
+                &:hover{
                     border: none;
                     transform: scale(1.1);
                     box-shadow: 0 0 1.25rem .3125rem lime;

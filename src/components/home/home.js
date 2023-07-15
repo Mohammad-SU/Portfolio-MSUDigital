@@ -1,6 +1,4 @@
 /*
-- particle size 2000px
-- change hover animations to click for mobile
 - favicon SVG?
 - Check if website looks good on other browsers (firefox, bing, opera, IE, etc.)
 - Change demo links to google drive/dropbox, embed videos?

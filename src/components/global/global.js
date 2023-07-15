@@ -69,6 +69,53 @@ tsParticles.load("particles-main-content", {
         detectsOn: "window"
     },
     detectRetina: true,
+    
+    responsive: [
+        {
+            maxWidth: 2600,
+            options: {
+                particles: {
+                    number: 15,
+                    size: {
+                        value: {min: 7, max: 8.5}
+                    }
+                }
+            }
+        },
+        {
+            maxWidth: 2000,
+            options: {
+                particles: {
+                    number: 18,
+                    size: {
+                        value: {min: 4.5, max: 5.5}
+                    }
+                }
+            }
+        }, 
+        {
+            maxWidth: 1600,
+            options: {
+                particles: {
+                    number: 18,
+                    size: {
+                        value: {min: 4, max: 5}
+                    }
+                }
+            }
+        },
+        {
+            maxWidth: 650,
+            options: {
+                particles: {
+                    number: 18,
+                    size: {
+                        value: {min: 3, max: 4}
+                    }
+                }
+            }
+        }
+    ]
 })
 
 const particles_main_content = tsParticles.domItem(0)
