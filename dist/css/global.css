@@ -185,6 +185,12 @@ a {
   margin-top: -100vh;
 }
 
+@media (min-width: 1300px) {
+  #about-content {
+    scroll-margin-top: 20px;
+  }
+}
+
 #contact-heading {
   padding-top: 6.2rem;
   padding-bottom: 2.5rem;

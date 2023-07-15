@@ -49,9 +49,9 @@
 
 .project-image-cont {
   position: relative;
-  width: 243.4375rem;
+  width: -moz-max-content;
+  width: max-content;
   height: 23.75rem;
-  clear: both;
   background: rgba(0, 255, 0, 0.7);
   transition: transform 700ms;
   transform: translate(0);
