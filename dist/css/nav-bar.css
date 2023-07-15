@@ -19,6 +19,7 @@
 @media (max-width: 720px) {
   #nav-bar {
     justify-content: center;
+    padding-right: 14px;
   }
 }
 

@@ -63,8 +63,13 @@ html {
   }
 }
 
+@font-face {
+  font-family: "Consolas";
+  src: url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.eot");
+  src: url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.woff") format("woff"), url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.svg#Consolas") format("svg");
+}
 body {
-  font-family: consolas, monospace, Courier;
+  font-family: Consolas;
   font-weight: normal;
   font-style: normal;
   background: black;
@@ -207,5 +212,16 @@ a {
 @media (max-width: 440px) {
   #contact-content {
     padding-bottom: 12rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #about, #projects {
+    scroll-margin-top: 25px;
+  }
+}
+@media (max-width: 360px) {
+  #about, #projects {
+    scroll-margin-top: 30px;
   }
 }/*# sourceMappingURL=global.css.map */

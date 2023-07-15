@@ -59,10 +59,8 @@ tsParticles.load("particles-main-content", {
     },
     retina_detect: false,
 })
-  
-const particles_main_content = tsParticles.domItem(0)
-console.log(tsParticles.domItem(0))
 
+const particles_main_content = tsParticles.domItem(0)
 $(window).scroll(function() {
     if ($(window).scrollTop() <= $('#nav-bar').height()) {
         particles_main_content.pause()
