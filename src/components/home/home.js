@@ -113,7 +113,7 @@ function windowResizeHome() {
                 },
             }
         },
-        retina_detect: false,
+        detectRetina: true,
     })
 }
 windowResizeHome()

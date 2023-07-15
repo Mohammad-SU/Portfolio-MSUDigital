@@ -68,7 +68,7 @@ tsParticles.load("particles-main-content", {
     interactivity: {
         detectsOn: "window"
     },
-    retina_detect: false,
+    detectRetina: true,
 })
 
 const particles_main_content = tsParticles.domItem(0)
