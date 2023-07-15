@@ -1,2 +1,2 @@
 # Portfolio-MSU-Digital
-My portfolio, MSU Digital - work in progress 
+My portfolio, MSU Digital
