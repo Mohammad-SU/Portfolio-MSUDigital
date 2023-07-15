@@ -28,5 +28,4 @@ function windowResizeAbout() {
         $(".skill-cont-wrapper").remove()
     }
 }
-$(window).on("resize", windowResizeAbout)
 windowResizeAbout()

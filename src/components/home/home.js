@@ -116,7 +116,6 @@ function windowResizeHome() {
         retina_detect: false,
     })
 }
-$(window).on("resize", windowResizeHome)
 windowResizeHome()
 
 const particles_home = tsParticles.domItem(1)

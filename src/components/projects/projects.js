@@ -80,7 +80,6 @@ function windowResizeProjects() {
         projectRightImageAnchors[1].before(projectRightInfos[1])
     }
 }
-$(window).on("resize", windowResizeProjects)
 windowResizeProjects()
 
 

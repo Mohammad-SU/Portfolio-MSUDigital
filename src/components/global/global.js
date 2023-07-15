@@ -1,3 +1,14 @@
+var width = $(window).width()
+$(window).on('resize', function() {
+    if ($(this).width() !== width) {
+        width = $(this).width()
+        windowResizeHome()
+        windowResizeAbout()
+        windowResizeNav()
+        windowResizeProjects()
+    }
+})
+
 function viewportVis (el) { // Check if element is visible in viewport based on threshold
     if (typeof jQuery === "function" && el instanceof jQuery) {
         el = el[0];
