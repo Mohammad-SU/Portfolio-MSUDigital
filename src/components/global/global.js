@@ -97,7 +97,6 @@ tsParticles.load("particles-main-content", {
             maxWidth: 1600,
             options: {
                 particles: {
-                    number: 18,
                     size: {
                         value: {min: 4, max: 5}
                     }
@@ -105,10 +104,15 @@ tsParticles.load("particles-main-content", {
             }
         },
         {
+            maxWidth: 800,
+            options: {
+                detectRetina: false,
+            }
+        },
+        {
             maxWidth: 650,
             options: {
                 particles: {
-                    number: 18,
                     size: {
                         value: {min: 3, max: 4}
                     }
