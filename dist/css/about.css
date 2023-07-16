@@ -118,6 +118,20 @@
   margin: 0 auto;
   font-size: 1.563em;
 }
+.skill-item p::before {
+  content: ">>";
+  position: absolute;
+  margin-left: -1.29em;
+  margin-top: -0.0625em;
+  letter-spacing: -0.2em;
+}
+.skill-item p::after {
+  content: "<<";
+  position: absolute;
+  margin-left: 0.33em;
+  margin-top: -0.0625em;
+  letter-spacing: -0.2em;
+}
 @media (max-width: 650px) {
   .skill-item p {
     font-weight: bold;
@@ -212,9 +226,11 @@
 }
 #css-skill img:last-child {
   margin-right: 0.5625em;
+  height: 65%;
+  width: 3.3em;
 }
 #css-skill p {
-  margin-right: 0.72em;
+  margin-right: 2.6em;
 }
 
 #react-skill img:first-child {

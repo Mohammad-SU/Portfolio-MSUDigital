@@ -53,10 +53,10 @@ function windowResizeProjects() {
     }
 
     if ($(window).width() <= 1332 && $(window).width() >= 1301) {
-        $("#project-stack-connect").text(" >> JS/jQuery • HTML • CSS << ")
+        $("#project-stack-connect").text("JS/jQuery • HTML • CSS")
     }
     else {
-        $("#project-stack-connect").text(" >> JavaScript/jQuery • HTML • CSS << ")
+        $("#project-stack-connect").text("JavaScript/jQuery • HTML • CSS")
     }
 
     if ($(window).width() <= 1380 && $(window).width() >= 1301) {

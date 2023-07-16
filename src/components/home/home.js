@@ -1,4 +1,6 @@
 /*
+- Center arrows
+- fix home cta border hover for smaller screens
 - favicon SVG?
 - Check if website looks good on other browsers (firefox, bing, opera, IE, etc.)
 - Change demo links to google drive/dropbox, embed videos?
@@ -21,10 +23,10 @@ function windowResizeHome() {
         $("#home-heading__greeting").text("Welcome!")
     }
 
-    let homeHeadingHeight = $("#home-heading__line-2").css("font-size")
-    let homeCtaScale = parseFloat(homeHeadingHeight)/100*1.8 // Make home-cta smaller than home heading
+    let homeHeadingFontSize = $("#home-heading__line-2").css("font-size")
+    let homeCtaScale = parseFloat(homeHeadingFontSize)/100*1.8 // Make home-cta smaller than home heading
     if ($(window).width() <= 425) {
-        homeCtaScale = parseFloat(homeHeadingHeight)/100*2
+        homeCtaScale = parseFloat(homeHeadingFontSize)/100*2
     }
     document.querySelector("#home-cta").style.scale = String(homeCtaScale)
 
@@ -111,7 +113,7 @@ function windowResizeHome() {
                 },
             }
         },
-        detectRetina: true,
+        detectRetina: false,
     })
 }
 windowResizeHome()

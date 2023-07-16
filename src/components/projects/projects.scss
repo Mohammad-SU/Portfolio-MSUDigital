@@ -197,6 +197,22 @@
             margin-top: .3125rem;
             margin-bottom: .9375rem;
             font-size: 1.3125rem;
+
+            &::before {
+                content: '>>';
+                position: absolute;
+                margin-left: -1.37em;
+                margin-top: -0.0625em;
+                letter-spacing: -0.15em;
+            }
+
+            &::after {
+                content: '<<';
+                position: absolute;
+                margin-left: 0.4em;
+                margin-top: -0.0625em;
+                letter-spacing: -0.15em;
+            }
         }
 
         .project-description {
