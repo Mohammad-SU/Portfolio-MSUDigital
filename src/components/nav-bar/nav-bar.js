@@ -34,13 +34,13 @@ function windowResizeNav() {
     if ($(window).width() <= 1300) {
         observerNavAbout = new IntersectionObserver(navActive, {
             rootMargin: '0px',
-            threshold: 0.2,
+            threshold: 0.35,
         })
         observerNavAbout.observe($('#about')[0])
 
         observerNavProjects = new IntersectionObserver(navActive, {
             rootMargin: '0px',
-            threshold: 0.12,
+            threshold: 0.15,
         })
         observerNavProjects.observe($('#projects')[0])
     }
