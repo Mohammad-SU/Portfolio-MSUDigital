@@ -327,7 +327,7 @@
     }
 
     .g-recaptcha-bubble-arrow + div {
-        transform-origin: 0 0;
+        transform-origin: center;
         transform: scale(0.9);
         position: fixed !important;
         left: 50%;
