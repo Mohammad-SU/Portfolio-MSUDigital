@@ -64,7 +64,7 @@ html {
 }
 
 body {
-  font-family: consolas, consolas, monospace, monospace;
+  font-family: "consolasregular";
   font-weight: normal;
   font-style: normal;
   background: black;
