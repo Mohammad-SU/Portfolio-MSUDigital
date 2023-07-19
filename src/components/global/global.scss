@@ -44,18 +44,8 @@ html {
     }
 }
 
-@font-face { // For mobile
-    font-family: "Consolas"; 
-    src: url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.eot"); 
-    src: url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.eot?#iefix") format("embedded-opentype"), 
-        url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.woff2") format("woff2"), 
-        url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.woff") format("woff"), 
-        url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.ttf") format("truetype"), 
-        url("//db.onlinewebfonts.com/t/771d2a89fb0fc4c6f7942f46f6790e09.svg#Consolas") format("svg"); 
-}
-
 body {
-    font-family: Consolas, consolas, monospace;
+    font-family: consolas, consolas, monospace, monospace;
     font-weight: normal;
     font-style: normal;
     background: black;

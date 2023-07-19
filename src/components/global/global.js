@@ -106,7 +106,7 @@ tsParticles.load("particles-main-content", {
         {
             maxWidth: 800,
             options: {
-                detectRetina: false,
+                detectRetina: false
             }
         },
         {
