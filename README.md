@@ -1,6 +1,6 @@
 # Portfolio-MSU-Digital
 ## My Portfolio - https://msu-digital.netlify.app
-
+HTML - CSS/Sass - JavaScript
 ![MSU Digital Portfolio - Screenshot 1](screenshots/portfolio-screenshot-1.png)
 ![MSU Digital Portfolio - Screenshot 2](screenshots/portfolio-screenshot-2.png)
 ![MSU Digital Portfolio - Screenshot 3](screenshots/portfolio-screenshot-3.png)
