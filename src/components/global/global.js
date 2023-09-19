@@ -68,7 +68,7 @@ tsParticles.load("particles-main-content", {
     interactivity: {
         detectsOn: "window"
     },
-    detectRetina: true,
+    detectRetina: false,
     
     responsive: [
         {
@@ -101,12 +101,6 @@ tsParticles.load("particles-main-content", {
                         value: {min: 4, max: 5}
                     }
                 }
-            }
-        },
-        {
-            maxWidth: 800,
-            options: {
-                detectRetina: false
             }
         },
         {
