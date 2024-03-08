@@ -1,4 +1,4 @@
-# Portfolio-MSU-Digital
+# Portfolio-MSUDigital
 ## My Portfolio - https://msudigital.netlify.app
 
 ![MSU Digital Portfolio - Screenshot 1](screenshots/portfolio-screenshot-1.png)
