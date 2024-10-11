@@ -1,18 +1,7 @@
 const submitButton = $("#contact-form__submit")
 const errorText = $("#error-text")
 
-let captchaState = ""
 let formState = ""
-
-function captchaCompleted() {
-    captchaState = "valid"
-}
-function captchaExpired() {
-    captchaState = "invalid"
-}
-function captchaError() {
-    captchaState = "error"
-}
 
 submitButton.on("pointerenter", function() {
     const re = /^\S+@\S+\.\S+$/
@@ -29,10 +18,6 @@ submitButton.on("pointerenter", function() {
     }
 
     switch (true) {
-        case captchaState == "error":
-            submitButton.prop('disabled', true);
-            errorText.text("Captcha error. Please check your connection and/or refresh the page.")
-            break;
         case formState == "unfinished":
             submitButton.prop('disabled', true);
             errorText.text("Please fill out all fields.")
@@ -40,10 +25,6 @@ submitButton.on("pointerenter", function() {
         case formState == "invalid email":
             submitButton.prop('disabled', true);
             errorText.text("Please enter a valid email.")
-            break;
-        case captchaState == "invalid":
-            submitButton.prop('disabled', true);
-            errorText.text("Please complete the captcha.")
             break;
         default:
             submitButton.prop('disabled', false);

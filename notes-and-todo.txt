@@ -1,0 +1,2 @@
+Using netlify instead of cloudflare as the portfolio was slow on cloudflare for some reason, and setting up forms on netlify
+seems easier.
