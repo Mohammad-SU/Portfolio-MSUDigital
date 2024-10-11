@@ -10,27 +10,36 @@ function initializeSlider(containerId) {
     let slideManualDelay = 8000 // For when a slide button is clicked (so the slide stays longer so the user can study it better)
 
     function nextSlide() {
-        imageContainer.css({transition: "transform 700ms", transform: `translate(${translateNum}px)`});
+        console.log('run')
         translateNum -= slideSize; // Decrement so that it translates the images left (to move the slider 'right')
+        imageContainer.css({transition: "transform 700ms", transform: `translate(${translateNum}px)`});
+        updateCurrentSlideButton();
+    }
+
+    // For UX to show which button the current slide is for
+    function updateCurrentSlideButton() {
+        const currentSlideIndex = Math.abs(Math.round(translateNum / slideSize)) % slideCount;
+        buttons.removeClass('matches-current-slide');
+        buttons.eq(currentSlideIndex).addClass('matches-current-slide');
     }
 
     function slideAnimation() {
         // After the last slide, a duplicate of the first slide exists to make it seem like the slider is endless.
         // After the duplicate is fully in view, then the slider position should reset to the first instantly without animation
-        const duplicateSlideReached = translateNum === -slideSize * (slideCount + 1)
+        const duplicateSlideReached = translateNum === -slideSize * slideCount // For some reason it's not * slideCount + 1 but actually * slideCount, otherwise led to issues
 
         if (duplicateSlideReached) {
-            imageContainer.css({transition: "none", transform: "translate(0px)"});
             translateNum = 0;
-
+            imageContainer.css({transition: "none", transform: `translate(${translateNum})`});
+            
             // Buffer
             setTimeout(() => {
                 nextSlide()
-            }, 25);
-        } 
-        else {
+            }, 50)
+        } else {
             nextSlide()
         }
+
         animationTimeout = setTimeout(() => slideAnimation(), slideAutoDelay);
     }
 
@@ -40,11 +49,14 @@ function initializeSlider(containerId) {
         imageContainer.css({transition: "transform 700ms", transform: `translate(${translateNum}px)`});
         clearTimeout(animationTimeout);
         animationTimeout = setTimeout(() => slideAnimation(), slideManualDelay);
+        updateCurrentSlideButton();
+
     });
 
     return {
         start: () => {
             animationTimeout = setTimeout(() => slideAnimation(), slideAutoDelay);
+            updateCurrentSlideButton();
         },
         stop: () => {
             clearTimeout(animationTimeout);
@@ -53,6 +65,7 @@ function initializeSlider(containerId) {
             clearTimeout(animationTimeout);
             translateNum = 0;
             imageContainer.css({transition: "transform 700ms", transform: "translate(0px)"});
+            updateCurrentSlideButton();
         }
     };
 }

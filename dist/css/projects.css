@@ -163,6 +163,11 @@
   border: 0.1875rem dashed lime;
   animation: spin-slide-button 6s linear infinite;
 }
+.slide-button.matches-current-slide {
+  box-shadow: 0 0 1.25rem 0.3125rem lime;
+  text-shadow: 0 0 0.3125rem lime, 0 0 0.625rem lime, 0 0 0.9375rem lime, 0 0 1.25rem lime, 0 0 1.5625rem lime, 0 0 1.875rem lime, 0 0 2.1875rem lime;
+  animation: glow-text-shadow-slide-button 0.7s ease-in-out 330ms infinite alternate, glow-box-shadow-slide-button 0.7s ease-in-out 330ms infinite alternate !important;
+}
 @keyframes spin-slide-button {
   100% {
     transform: rotateZ(360deg);
