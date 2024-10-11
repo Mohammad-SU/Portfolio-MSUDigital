@@ -7,6 +7,7 @@
   margin: 6.375rem 0;
   padding: 1.875rem 1.25rem;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .project:first-child {
   margin-top: 0;
@@ -23,12 +24,9 @@
 .slider-cont {
   transition: transform 0.8s, opacity 0.8s;
   opacity: 0;
-}
-
-.project-left .slider-cont {
   transform: translateX(-30rem);
 }
-.project-left .slider-cont.projects__fade-in {
+.slider-cont.projects__fade-in {
   transform: translateX(0);
   opacity: 1;
 }
@@ -52,7 +50,7 @@
   width: -moz-max-content;
   width: max-content;
   height: 23.75rem;
-  background: rgba(0, 255, 0, 0.7);
+  background: transparent;
   transition: transform 700ms;
   transform: translate(0);
 }
@@ -73,6 +71,14 @@
   width: 48.6875rem;
   height: 23.75rem;
   float: left;
+}
+.project-image-slide.nested-slide-image-cont {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.project-image-slide .nested-slide-image {
+  height: 100%;
 }
 
 .slide-4-notes {
