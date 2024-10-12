@@ -42,6 +42,11 @@
   border: 0.1875rem dashed lime;
   border-bottom: none;
 }
+@media (max-width: 1300px) {
+  .slider-cont .slider-caption {
+    border-top: none;
+  }
+}
 
 .slider {
   width: 48.6688rem;

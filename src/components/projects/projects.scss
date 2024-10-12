@@ -41,6 +41,10 @@
             font-size: 1.3rem;
             border: .1875rem dashed lime;
             border-bottom: none;
+
+            @media (max-width: 1300px) {
+                border-top: none;
+            }
         }
     }
 
