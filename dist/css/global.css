@@ -80,6 +80,27 @@ a {
   color: lime;
   text-decoration: none;
 }
+a.extra-anchor-styles {
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 170, 0);
+  text-underline-offset: 0.2rem;
+}
+a.extra-anchor-styles:hover {
+  text-decoration-color: lime;
+}
+a.extra-anchor-styles:active {
+  text-decoration-color: rgb(0, 190, 0);
+}
+
+::-moz-selection {
+  background-color: rgba(0, 255, 0, 0.4);
+  color: lime;
+}
+
+::selection {
+  background-color: rgba(0, 255, 0, 0.4);
+  color: lime;
+}
 
 ::-webkit-scrollbar:horizontal {
   height: 8px;

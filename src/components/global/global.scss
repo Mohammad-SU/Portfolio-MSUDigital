@@ -62,6 +62,25 @@ body {
     a {
         color: lime;
         text-decoration: none;
+
+        &.extra-anchor-styles {
+            text-decoration: underline;
+            text-decoration-color: rgb(0, 170, 0);
+            text-underline-offset: .2rem;
+    
+            &:hover {
+                text-decoration-color: lime;
+            }
+    
+            &:active {
+                text-decoration-color: rgb(0, 190, 0);
+            }
+        }
+    }
+
+    ::selection {
+        background-color: rgba(0, 255, 0, 0.4);
+        color: lime;
     }
 
     ::-webkit-scrollbar:horizontal{ 

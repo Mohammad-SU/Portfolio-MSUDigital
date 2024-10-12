@@ -55,4 +55,4 @@ function windowResizeNav() {
         observerNavProjects.observe($('#projects')[0])
     }
 }
-windowResizeNav()
+windowResizeNav() // Called on resize in global.js

@@ -1,16 +1,35 @@
+let limedriveSlider, notesSlider;
+
 function initializeSlider(containerId) {
+    const captions = [
+        "File List - Clean UI",
+        "File Viewer - Video and Controls",
+        "File List - Detailed UI, Item Select, Drag & Drop, Upload Queue",
+        "File Viewer - PDF and Shareable Link Generation",
+        "Settings",
+        "Login",
+        "Responsive Design - Usable on Varied Screen Sizes"
+    ];
+
     const container = $(`#${containerId}`);
+    const sliderCaption = container.find('.slider-caption');
     const imageContainer = container.find('.project-image-cont');
     const buttons = container.find('.slide-button');
-    const slideSize = rem(48.6875);
+    const firstSlide = imageContainer.find('.project-image-slide').first();
+
+    const slideSize = firstSlide.outerWidth();
+    let timeouts = [];
     let translateNum = 0;
     let slideCount = buttons.length;
-    let animationTimeout;
     let slideAutoDelay = 3000 // For when no slide button is clicked, or after a click after the manual delay is finished
     let slideManualDelay = 8000 // For when a slide button is clicked (so the slide stays longer so the user can study it better)
 
+    function clearAllTimeouts() {
+        timeouts.forEach(clearTimeout);
+        timeouts = [];
+    }
+
     function nextSlide() {
-        console.log('run')
         translateNum -= slideSize; // Decrement so that it translates the images left (to move the slider 'right')
         imageContainer.css({transition: "transform 700ms", transform: `translate(${translateNum}px)`});
         updateCurrentSlideButton();
@@ -21,6 +40,9 @@ function initializeSlider(containerId) {
         const currentSlideIndex = Math.abs(Math.round(translateNum / slideSize)) % slideCount;
         buttons.removeClass('matches-current-slide');
         buttons.eq(currentSlideIndex).addClass('matches-current-slide');
+
+        // Update caption
+        sliderCaption.text(captions[currentSlideIndex]);
     }
 
     function slideAnimation() {
@@ -32,45 +54,76 @@ function initializeSlider(containerId) {
             translateNum = 0;
             imageContainer.css({transition: "none", transform: `translate(${translateNum})`});
             
-            // Buffer
-            setTimeout(() => {
-                nextSlide()
-            }, 50)
+            const bufferTimeout = setTimeout(() => nextSlide(), 25);
+            timeouts.push(bufferTimeout);
         } else {
             nextSlide()
         }
 
-        animationTimeout = setTimeout(() => slideAnimation(), slideAutoDelay);
+        const animationTimeout = setTimeout(() => slideAnimation(), slideAutoDelay);
+        timeouts.push(animationTimeout);
     }
 
     buttons.on("click", function() {
         const buttonIndex = parseInt($(this).text()) - 1; // -1 as index is +1 higher
         translateNum = -slideSize * buttonIndex;
         imageContainer.css({transition: "transform 700ms", transform: `translate(${translateNum}px)`});
-        clearTimeout(animationTimeout);
-        animationTimeout = setTimeout(() => slideAnimation(), slideManualDelay);
+
+        clearAllTimeouts();
+
+        const manualTimeout = setTimeout(() => slideAnimation(), slideManualDelay);
+        timeouts.push(manualTimeout);
+
         updateCurrentSlideButton();
 
     });
 
     return {
         start: () => {
-            animationTimeout = setTimeout(() => slideAnimation(), slideAutoDelay);
+            clearAllTimeouts();
+
+            const animationTimeout = setTimeout(() => slideAnimation(), slideAutoDelay);
+            timeouts.push(animationTimeout);
+
             updateCurrentSlideButton();
         },
         stop: () => {
-            clearTimeout(animationTimeout);
+            clearAllTimeouts();
         },
         reset: () => {
-            clearTimeout(animationTimeout);
+            clearAllTimeouts();
+            
             translateNum = 0;
             imageContainer.css({transition: "transform 700ms", transform: "translate(0px)"});
+
             updateCurrentSlideButton();
         }
     };
 }
 
-let limedriveSlider, notesSlider;
+function reinitializeSliders() {
+    if (limedriveSlider) {
+        limedriveSlider.stop();
+        limedriveSlider = initializeSlider("limedrive-project");
+        if ($("#limedrive-project .slider-cont").hasClass("projects__fade-in")) {
+            // Reset the element even though the slider function is reinitialized
+            limedriveSlider.reset();
+            limedriveSlider.stop();
+            limedriveSlider.start();
+        }
+    }
+    
+    if (notesSlider) {
+        notesSlider.stop();
+        notesSlider = initializeSlider("notes-project");
+        if ($("#notes-project .slider-cont").hasClass("projects__fade-in")) {
+            // Reset the element even though the slider function is reinitialized
+            notesSlider.reset();
+            notesSlider.stop();
+            notesSlider.start();
+        }
+    }
+}
 
 function projectsFadeIn() {
         if (viewportVis($("#limedrive-project")) && !$("#limedrive-project .slider-cont").hasClass("projects__fade-in")) {
@@ -98,8 +151,7 @@ $(window).scroll(projectsFadeIn)
 projectsFadeIn()
 
 function windowResizeProjects() {
-    if (limedriveSlider) limedriveSlider.reset();
-    if (notesSlider) notesSlider.reset();
+    reinitializeSliders();
     
     if ($("#limedrive-project .slider-cont").hasClass("projects__fade-in")) {
         limedriveSlider.start();
@@ -139,7 +191,7 @@ function windowResizeProjects() {
         limedriveProjectRightSlider.before(limedriveProjectRightInfo)
     }
 }
-windowResizeProjects()
+windowResizeProjects() // Called on resize in global.js
 
 
 

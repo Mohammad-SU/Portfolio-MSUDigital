@@ -113,7 +113,7 @@ function windowResizeHome() {
         detectRetina: false,
     })
 }
-windowResizeHome()
+windowResizeHome() // Called on resize in global.js
 
 const particles_home = tsParticles.domItem(1)
 

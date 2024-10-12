@@ -28,4 +28,4 @@ function windowResizeAbout() {
         $(".skill-cont-wrapper").remove()
     }
 }
-windowResizeAbout()
+windowResizeAbout() // Called on resize in global.js
