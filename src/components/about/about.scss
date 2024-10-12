@@ -177,12 +177,14 @@
 
                     img:first-child {
                         margin-left: 1.125em;
-                        border-radius: .375em;
                     }
                     img:last-child {
                         margin-right: 1.125em;
-                        border-radius: .375em;
                     }
+                }
+
+                #javascript-skill img {
+                    border-radius: .4em;
                 }
 
                 #html-skill img {

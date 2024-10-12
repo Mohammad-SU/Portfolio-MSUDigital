@@ -205,11 +205,13 @@
 }
 #javascript-skill img:first-child, #typescript-skill img:first-child {
   margin-left: 1.125em;
-  border-radius: 0.375em;
 }
 #javascript-skill img:last-child, #typescript-skill img:last-child {
   margin-right: 1.125em;
-  border-radius: 0.375em;
+}
+
+#javascript-skill img {
+  border-radius: 0.4em;
 }
 
 #html-skill img:first-child {

@@ -39,8 +39,7 @@
   width: -moz-fit-content;
   width: fit-content;
   font-size: 1.3rem;
-  border: 0.0625rem solid lime;
-  border-top: none;
+  border: 0.1875rem dashed lime;
   border-bottom: none;
 }
 
