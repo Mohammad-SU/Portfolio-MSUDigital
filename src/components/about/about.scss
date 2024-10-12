@@ -198,14 +198,13 @@
 
                 #css-skill img {
                     position: absolute;
+                    margin-top: .1563em;
 
                     &:first-child {
-                        margin-top: .1563em;
                         left: 1.1rem;
                     }
                     &:last-child {
-                        height: 65%;
-                        right: .5rem;
+                        right: 1.1rem;
                     }
                 }
 
