@@ -24,11 +24,6 @@
 .slider-cont {
   transition: transform 0.8s, opacity 0.8s;
   opacity: 0;
-  transform: translateX(-30rem);
-}
-.slider-cont.projects__fade-in {
-  transform: translateX(0);
-  opacity: 1;
 }
 .slider-cont .slider-caption {
   position: absolute;
@@ -259,6 +254,9 @@
     padding: 0 0.8rem;
   }
 }
+.project-description.limedrive-description {
+  text-align: left;
+}
 
 .project-lives__cont {
   margin-top: 1.875rem;
@@ -326,10 +324,10 @@
 .project-left {
   background: repeating-linear-gradient(45deg, lime, lime 0.125rem, transparent 0.1875rem, transparent 5rem);
 }
-.project-left .project-image {
+.project-left .project-image, .project-left .slider-cont {
   transform: translateX(-30rem);
 }
-.project-left .project-image.projects__fade-in {
+.project-left .project-image.projects__fade-in, .project-left .slider-cont.projects__fade-in {
   transform: translateX(0);
   opacity: 1;
 }
@@ -351,10 +349,10 @@
     padding-top: 3rem;
   }
 }
-.project-right .project-image {
+.project-right .project-image, .project-right .slider-cont {
   transform: translateX(30rem);
 }
-.project-right .project-image.projects__fade-in {
+.project-right .project-image.projects__fade-in, .project-right .slider-cont.projects__fade-in {
   transform: translateX(0);
   opacity: 1;
 }

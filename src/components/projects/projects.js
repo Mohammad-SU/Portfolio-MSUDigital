@@ -1,6 +1,6 @@
 let limedriveSlider, notesSlider;
 
-function initializeSlider(containerId) {
+function initializeSlider(containerId) { // Bugs out in firefox mobile sometimes for some reason
     const captions = [
         "File List - Clean UI",
         "File Viewer - Video and Controls",
