@@ -109,17 +109,10 @@
                 margin-left: 0.25em;
             }
             @media (max-width: 990px) {
-                width: 600px;
+                width: 90%;
                 margin-left: 0;
                 text-align: center;
-                -webkit-line-clamp: 2;
                 line-clamp: 2;
-            }
-            @media (max-width: 600px) {
-                width: 500px;
-            }
-            @media (max-width: 400px) {
-                width: 350px;
             }
 
             &.home__fade-in {

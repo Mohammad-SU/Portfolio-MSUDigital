@@ -124,21 +124,10 @@
 }
 @media (max-width: 990px) {
   #home-heading__line-2 {
-    width: 600px;
+    width: 90%;
     margin-left: 0;
     text-align: center;
-    -webkit-line-clamp: 2;
     line-clamp: 2;
-  }
-}
-@media (max-width: 600px) {
-  #home-heading__line-2 {
-    width: 500px;
-  }
-}
-@media (max-width: 400px) {
-  #home-heading__line-2 {
-    width: 350px;
   }
 }
 #home-heading__line-2.home__fade-in {
