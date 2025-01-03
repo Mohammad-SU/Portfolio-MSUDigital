@@ -112,6 +112,7 @@
                 width: 600px;
                 margin-left: 0;
                 text-align: center;
+                -webkit-line-clamp: 2;
                 line-clamp: 2;
             }
             @media (max-width: 600px) {
