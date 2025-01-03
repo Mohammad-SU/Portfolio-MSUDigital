@@ -1,10 +1,10 @@
 # Portfolio-MSUDigital
 ## My Portfolio - https://msudigital.netlify.app
 
-![MSU Digital Portfolio - Screenshot 1](screenshots/portfolio-screenshot-1.png)
-![MSU Digital Portfolio - Screenshot 2](screenshots/portfolio-screenshot-2.png)
-![MSU Digital Portfolio - Screenshot 3](screenshots/portfolio-screenshot-3.png)
-![MSU Digital Portfolio - Screenshot 3](screenshots/portfolio-screenshot-4.png)
+![MSU Digital Portfolio - Screenshot 1](portfolio-images/portfolio-screenshot-1.png)
+![MSU Digital Portfolio - Screenshot 2](portfolio-images/portfolio-screenshot-2.png)
+![MSU Digital Portfolio - Screenshot 3](portfolio-images/portfolio-screenshot-3.png)
+![MSU Digital Portfolio - Screenshot 3](portfolio-images/portfolio-screenshot-4.png)
 
 ### Current features:
 - View information about me and my projects
